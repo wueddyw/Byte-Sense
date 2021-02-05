@@ -1,22 +1,12 @@
 export const MenuItems = [
   {
-    title: 'Marketing',
-    path: '/marketing',
+    title: 'Standard Byte Scan 1.0 ',
+    path: '/StandardScan',
     cName: 'dropdown-link'
   },
   {
-    title: 'Consulting',
-    path: '/consulting',
+    title: 'Expert Level Byte Scan 1.0 ',
+    path: '/ExpertScan',
     cName: 'dropdown-link'
   },
-  {
-    title: 'Design',
-    path: '/design',
-    cName: 'dropdown-link'
-  },
-  {
-    title: 'Development',
-    path: '/development',
-    cName: 'dropdown-link'
-  }
 ];

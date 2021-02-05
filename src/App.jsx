@@ -9,6 +9,8 @@ import Product from './components/pages/Product';
 import News from './components/pages/News';
 import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
+import StandardScan from './components/pages/StandardScan';
+import ExpertScan from './components/pages/ExpertScan';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path='/News' component={News} />
         <Route path='/Career' component={Career} />
         <Route path='/Contact' component={Contact} />
+        <Route path = '/StandardScan' component={StandardScan}/>
+        <Route path = '/ExpertScan' component={ExpertScan}/>
       </Switch>
     </Router>
   );
