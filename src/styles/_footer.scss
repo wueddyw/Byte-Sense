@@ -1,0 +1,15 @@
+@mixin gridCenter()
+{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(15, 76, 129);
+}
+
+.footer
+{
+    @include gridCenter();
+    color: white;
+}

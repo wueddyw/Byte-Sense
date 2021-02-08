@@ -1,0 +1,43 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase 
+{
+    @include flexCenter(column);
+
+    position: relative;
+    background-image: url("../images/aboutusbanner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 45vw;
+    width: 100%;
+
+    h3
+    {
+        font-size: 55px;
+        color: white;
+    }
+}
+
+// .showcase-overlay
+// {
+//     @include flexCenter(column);
+
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     h3
+//     {
+//         font-size: 55px;
+//         color: white;
+//     }
+// }

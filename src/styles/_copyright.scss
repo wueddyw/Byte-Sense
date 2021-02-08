@@ -1,0 +1,16 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright
+{
+    @include flexCenter(row);
+
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 10px;
+}

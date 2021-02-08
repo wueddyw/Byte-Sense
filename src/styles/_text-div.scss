@@ -1,0 +1,23 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-story
+{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    @include flexCenter(column);
+
+    p
+    {
+        font-size: 16px;
+        color: rgb(15, 76, 129);
+        line-height: 1.7em;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
