@@ -1,0 +1,15 @@
+.haub-float-div {
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  width: 1050px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.haub-background {
+  background-color: #333333;
+  height: 100px;
+}
