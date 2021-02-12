@@ -5,11 +5,11 @@
 
 #supportForm {
     display: grid;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 #supportForm h3 {
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 #mess {
@@ -51,7 +51,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 45vw;
+    height: 80vh;
     width: 100%;
 }
 
