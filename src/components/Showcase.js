@@ -8,7 +8,9 @@ class Showcase extends Component {
   render() {
     return (
       <div className="showcase">
-        <h3>About Us</h3>
+        <div className="showcase-text">
+          <h3>About Us</h3>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import './components/FontAwesomeIcons';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> 8feed9a7e65954fa6df13d46616ea911a73bb08b
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -12,8 +16,15 @@ import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <Router>
       <Navbar />
