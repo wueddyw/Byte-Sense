@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from "react";
 
-function ExpertScanDetails() {
+class ExpertScanDetails extends Component {
+  render() {
     return (
-        <div>
+        <div className="expert">
             <h2>Expert Level Byte Scan 1.0 </h2> 
             <ul>
                 <li>Scan your computer and server </li>
@@ -12,7 +13,8 @@ function ExpertScanDetails() {
                 <li>Monitor live system traffic activities and remote any malicious virus</li>
             </ul>
         </div>
-    )
+    );
+  }
 }
 
-export default ExpertScanDetails
+export default ExpertScanDetails;

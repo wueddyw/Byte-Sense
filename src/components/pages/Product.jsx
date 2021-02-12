@@ -1,15 +1,22 @@
 import React from 'react';
-import Products from './Career';
 import StandardScanDetails from '../StandardScanDetails';
 import ExpertScanDetails from '../ExpertScanDetails';
+import '../../styles/product.css';
+import ProductTopBanner from "../ProductTopBanner"
 
-export default function Consulting() {
+
+
+export default function Product() {
   return (
-    <>
-      <h1 className='product'>Products</h1>
-      <StandardScanDetails></StandardScanDetails>
-      <ExpertScanDetails></ExpertScanDetails>
-      <div className = "productPic"></div>
-    </>
+    <div className='productContainer'>
+      <ProductTopBanner></ProductTopBanner>
+      <div className='productbox' data-aos="fade-left">
+        <div className = 'aboutProduct'>
+          <StandardScanDetails></StandardScanDetails>
+          <ExpertScanDetails></ExpertScanDetails>
+        </div>
+      </div>
+      
+    </div>
   );
 }
