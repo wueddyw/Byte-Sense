@@ -7,7 +7,7 @@ class FourDivs extends Component {
 
 	render() {
 		return (
-			<div className="spread">
+			<div className="spread" data-aos="fade-up">
 
                 <div class="floating-div"><p>Detection & Response</p></div>
                 <div class="floating-div"><p>Threat Monitoring</p></div>

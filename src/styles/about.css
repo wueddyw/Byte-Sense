@@ -2,7 +2,7 @@ body {
   margin: 0 0 0 0;
 }
 
-.root {
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,26 +11,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   scroll-behavior: smooth;
-  font-family: Helvetica;
   margin: 0 0 0 0;
-}
-
-.navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #646464;
-  color: white;
+  font-family: "PT Sans", sans-serif;
 }
 
 .showcase {
@@ -41,14 +23,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  background-image: url("../images/aboutusbanner.jpg");
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: url("../images/shutterstock3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,7 +38,18 @@ body {
 
 .showcase h3 {
   font-size: 55px;
-  color: white;
+  font-family: "PT Sans", sans-serif;
+  color: #0f4c81;
+}
+
+.showcase-text {
+  margin-top: 7vh;
+  margin-left: 7vw;
+}
+
+.showcase-text h3 {
+  font-size: 55px;
+  color: #0f4c81;
 }
 
 .our-story {

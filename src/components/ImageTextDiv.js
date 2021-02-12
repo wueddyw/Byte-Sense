@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useEffect }  from "react";
 import image from "../images/aboutimage.jpg";
 import image2 from "../images/aboutimage2.jpg";
 import image3 from "../images/aboutimage3.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 class ImageTextDiv extends Component {
   // constructor() {
@@ -11,7 +13,7 @@ class ImageTextDiv extends Component {
   render() {
     return (
       <div>
-        <div className="what-we-do">
+        <div className="what-we-do" data-aos="fade-left">
           <div className="image">
             <img src={image2} />
           </div>
@@ -29,7 +31,7 @@ class ImageTextDiv extends Component {
           </div>
         </div>
 
-        <div className="what-we-do">
+        <div className="what-we-do" data-aos="fade-right">
           <div className="text-left">
             <p>
               Our tailer-made solutions can help you stay ahead of the game. Our
@@ -50,7 +52,7 @@ class ImageTextDiv extends Component {
           </div>
         </div>
 
-        <div className="what-we-do">
+        <div className="what-we-do" data-aos="fade-left">
           <div className="image">
             <img src={image3} />
           </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -11,8 +11,15 @@ import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <Router>
       <Navbar />
