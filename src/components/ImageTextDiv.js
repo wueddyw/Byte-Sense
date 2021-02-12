@@ -1,22 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import image from "../images/aboutimage.jpg";
 import image2 from "../images/aboutimage2.jpg";
 import image3 from "../images/aboutimage3.jpg";
 
-class ImageTextDiv extends Component {
-  // constructor() {
-  //     super()
-  // }
+function ImageTextDiv() {
+  return (
+    <div>
+      <div className="what-we-do" data-aos="fade-left">
+        <div className="image">
+          <img src={image2} />
+        </div>
 
-  render() {
-    return (
-      <div>
-        <div className="what-we-do">
-          <div className="image">
-            <img src={image2} />
+        <div className="text-right">
+          <div>
+            <h3>Placeholder</h3>
           </div>
 
-          <div className="text-right">
+          <div>
             <p>
               It is very important to secure your computer systems and servers
               due to the fact you do not want to leak out sensitive company’s
@@ -28,9 +28,14 @@ class ImageTextDiv extends Component {
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="what-we-do">
-          <div className="text-left">
+      <div className="what-we-do" data-aos="fade-right">
+        <div className="text-left">
+          <div>
+            <h3>Placeholder</h3>
+          </div>
+          <div>
             <p>
               Our tailer-made solutions can help you stay ahead of the game. Our
               Cyber security team is backed by years of experiences and trusted
@@ -44,18 +49,23 @@ class ImageTextDiv extends Component {
               remediation report.
             </p>
           </div>
-
-          <div className="image">
-            <img src={image} />
-          </div>
         </div>
 
-        <div className="what-we-do">
-          <div className="image">
-            <img src={image3} />
-          </div>
+        <div className="image">
+          <img src={image} />
+        </div>
+      </div>
 
-          <div className="text-right">
+      <div className="what-we-do" data-aos="fade-left">
+        <div className="image">
+          <img src={image3} />
+        </div>
+
+        <div className="text-right">
+          <div>
+            <h3>Placeholder</h3>
+          </div>
+          <div>
             <p>
               Byte Sense is headquartered in Vancouver, Canada – the next IT hub
               of North America. Although Canada and United States are deeply
@@ -68,8 +78,8 @@ class ImageTextDiv extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default ImageTextDiv;
