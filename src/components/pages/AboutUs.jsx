@@ -5,7 +5,6 @@ import TextDiv from "../TextDiv";
 import ImageTextDiv from "../ImageTextDiv";
 import FourDivs from "../FourDivs";
 import Footer from "../Footer";
-import Copyright from "../Copyright";
 import "../../App.css";
 import "../../styles/about.css";
 // import AOS from "aos";
@@ -24,7 +23,6 @@ export default function ContactUs() {
       <ImageTextDiv />
       <FourDivs />
       <Footer />
-      <Copyright />
     </div>
   );
 }

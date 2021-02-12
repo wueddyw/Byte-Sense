@@ -1,29 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import FooterLinks from "./FooterLinks";
+import Copyright from "./Copyright";
 
-class Footer extends Component {
-  render() {
+function Footer() {
     return (
-      <div className="footer">
-        <div className="column">
-          <p>Temp Links</p>
-          <p>Temp Links</p>
-          <p>Temp Links</p>
+        <div className="footer-container">
+            <FooterLinks />
+            <Copyright />
         </div>
-
-        <div className="column">
-          <p>Temp Links</p>
-          <p>Temp Links</p>
-          <p>Temp Links</p>
-        </div>
-
-        <div className="column">
-          <p>Temp Links</p>
-          <p>Temp Links</p>
-          <p>Temp Links</p>
-        </div>
-      </div>
-    );
-  }
+    )
 }
 
-export default Footer
+export default Footer;
