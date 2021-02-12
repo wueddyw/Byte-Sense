@@ -12,7 +12,7 @@
 
     position: relative;
     justify-content: flex-start;
-    background-image: url("../images/shutterstock3.jpg");
+    background-image: url("../images/shutterstock2.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,21 +25,21 @@
         font-size: 55px;
         font-family: "PT Sans", sans-serif;
         // color: white;
-        color: rgb(15, 76, 129);
+        // color: rgb(15, 76, 129);
     }
 }
 
 .showcase-text
 {
-    margin-top: 7vh;
+    margin-top: 20vh;
     margin-left: 7vw;
 
     h3
     {
         font-size: 55px;
-        // font-family: "PT Sans", sans-serif;
-        // color: white;
-        color: rgb(15, 76, 129);
+        font-weight: normal;
+        color: white;
+        // color: rgb(15, 76, 129);
     }
 }
 

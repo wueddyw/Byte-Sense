@@ -27,7 +27,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-image: url("../images/shutterstock3.jpg");
+  background-image: url("../images/shutterstock2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,17 +39,17 @@ body {
 .showcase h3 {
   font-size: 55px;
   font-family: "PT Sans", sans-serif;
-  color: #0f4c81;
 }
 
 .showcase-text {
-  margin-top: 7vh;
+  margin-top: 20vh;
   margin-left: 7vw;
 }
 
 .showcase-text h3 {
   font-size: 55px;
-  color: #0f4c81;
+  font-weight: normal;
+  color: white;
 }
 
 .our-story {
