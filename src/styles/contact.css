@@ -1,0 +1,71 @@
+
+#content {
+    padding: 5vw;
+}
+
+#supportForm {
+    display: grid;
+    padding: 2vw;
+}
+
+#supportForm h3 {
+    font-size: 1.5vw;
+}
+
+#mess {
+    padding: 0.2vw;
+    margin: 1vw;
+    height: 30vh;
+    width: 50%;
+    resize: none;
+}
+
+#email {
+    padding: 0.2vw;
+    margin: 1vw;
+    height: 3vh;
+    width: 35%;
+}
+
+#name {
+    padding: 0.2vw;
+    margin: 1vw;
+    height: 3vh;
+    width: 35%;
+}
+
+#submitBtn {
+    padding: 0.2vw;
+    margin: 1vw;
+    height: 3vh;
+    width:8%;
+}
+
+#header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/contact_back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vw;
+    width: 100%;
+}
+
+#header h3 {
+    color: #fff;
+    font-size: 55px;
+}
+
+#contact {
+    font-size: 1.5vw;
+}
+
+#contact p {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    display: inline-block;
+}

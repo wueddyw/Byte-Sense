@@ -1,43 +1,39 @@
 import React from 'react';
-import '../../App.css';
-import './Contact.css';
+import '../../styles/contact.css';
 import email from '../../images/email.png';
 import tel from '../../images/telephone.png';
-import liveChat from '../../images/live-chat.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default function SignUp() {
-  return (
-    <div id="content">
-            <h1>Contact Us</h1>
-            <div id="grid-columns">
-                <div class="col-div">
-                    <p>Phone</p>
-                    <div class="img-div">
-                        <img src={tel}/>
+    return (
+        <div>
+            <header id="header">
+                <h3>Contact Us</h3>
+            </header>
+            <div id="content">
+                <div id="contact">
+                    <div id='tel'>
+                        <FontAwesomeIcon icon="phone"/>
+                        <p id="num">(778) 730-1010</p>
                     </div>
-                    <p>123-456-7890</p>
-                </div>
-                <div class="col-div">
-                    <p>Email</p>
-                    <div class="img-div">
-                        <img src={email}/>
+                    <div id='env'>
+                        <FontAwesomeIcon icon="envelope"/>
+                        <p id="em">info@bytesense.ca</p>
                     </div>
-                    <p>test@email.com</p>
-                </div>
-                <div class="col-div">
-                    <p>Live Chat</p>
-                    <div class="img-div">
-                        <img src={liveChat}/>
+                    <div id='address'>
+                        <FontAwesomeIcon icon="map-marker-alt"/>
+                        <p id="add">1122 Kingsway XXX</p>
                     </div>
                 </div>
+                <form id="supportForm">
+                    <h3>Submit a Form</h3>
+                    <input type="text" placeholder="Email" id="email" />
+                    <input type="text" placeholder="Your Name" id="name" />
+                    <textarea placeholder="Message" id="mess" form="supportForm"></textarea>
+                    <input type="submit" id="submitBtn" />
+                </form>
             </div>
-            <form id="supportForm">
-                <h2>Submit a Form</h2>
-                <input type="text" placeholder="Email" id="email"/>
-                <input type="text" placeholder="Your Name" id="name"/>
-                <textarea placeholder="Message" id="mess" form="supportForm"></textarea>
-                <input type="submit" id="submitBtn"/>
-            </form>
         </div>
-  );
+    );
 }

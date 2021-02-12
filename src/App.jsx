@@ -1,4 +1,5 @@
 import React from 'react';
+import './components/FontAwesomeIcons';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
