@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 import './components/FontAwesomeIcons';
-=======
 import React, { useEffect } from 'react';
->>>>>>> 8feed9a7e65954fa6df13d46616ea911a73bb08b
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
