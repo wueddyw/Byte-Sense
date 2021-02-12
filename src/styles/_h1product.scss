@@ -1,0 +1,98 @@
+.title{
+    margin-top: 0;
+    color: #7E7D80;
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    
+}
+.productContainer{
+    
+    padding-bottom: 40px;
+    background-color: #f0f4f7;
+}
+
+.productbox{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    margin-bottom: 500px;
+}
+
+.productbox::after{
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+
+.aboutProduct{
+    padding-bottom: 32px;
+    padding-top:50px;
+    background-image: url(../images/Product.png);
+    background-position: 53% 70%;
+    background-size: 250px;
+    background-repeat: no-repeat;
+}
+.aboutProduct .standard {
+    padding-bottom: 10px;
+    
+}
+
+.aboutProduct li{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.aboutProduct h2{
+    margin-top: 0;
+    color: #7E7D80;
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+}
+
+.product-top-banner {
+    background-image: url("../images/productpage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    /* margin-bottom: 1000px; */
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .product-top-banner-slogan {
+    color: #fff;
+    font-size: 4.5vw;
+    justify-content: left;
+    padding-top: 7vh;
+    padding-left: 7vw;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  .product-top-banner-sub-slogan {
+    color: #fff;
+    font-size: 2vw;
+    justify-content: left;
+    padding-top: 32vh;
+    padding-left: 7vw;
+    position: absolute;
+    z-index: 1;
+    text-shadow: 1.5px 1.5px #000000;
+  }
+
+
+

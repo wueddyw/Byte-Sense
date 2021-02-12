@@ -7,7 +7,7 @@ export default function ExpertScan() {
       <>
         <h1 className='expertScan'>Expert Level Byte Scan 1.0 </h1>
         <ExpertScanDetails></ExpertScanDetails>
-        <div className = "productPic"></div>
+        
       </>
     );
   }

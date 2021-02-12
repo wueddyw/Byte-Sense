@@ -6,7 +6,7 @@
 }
 
 .home-top-banner,
-.services,
+
 .products,
 .contact-us,
 .sign-up,
@@ -76,13 +76,4 @@
   padding-top: 100px;
 }
 
-.productPic {
-  width: auto;
-  height: auto;
-  content: url(./images/Product.png);
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
+
