@@ -5,48 +5,14 @@
   font-family: "PT Sans", sans-serif;
 }
 
-
-
 .home-top-banner,
 .services,
 .products,
 .contact-us,
 .sign-up,
-.marketing
- {
+.marketing {
   height: 70vh;
   display: flex;
-}
-
-.home-top-banner {
-  background-image: url("./images/img-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 80vh;
-  display: flex;
-  margin-bottom: 1000px;
-  padding-top: 100px;
-}
-
-.home-top-banner-slogan {
-  color: #fff;
-  font-size: 4.5vw;
-  justify-content: left;
-  padding-top: 7vh;
-  padding-left: 7vw;
-  position: absolute;
-  z-index: 1;
-}
-
-.home-top-banner-sub-slogan {
-  color: #fff;
-  font-size: 1.5vw;
-  justify-content: left;
-  padding-top: 32vh;
-  padding-left: 7vw;
-  position: absolute;
-  z-index: 1;
 }
 
 .services {
@@ -99,28 +65,24 @@
   padding-top: 100px;
 }
 
-.product{
+.product {
   font-size: 100px;
   padding-top: 100px;
 }
 
 .standardScan,
-.expertScan{
+.expertScan {
   font-size: 50px;
   padding-top: 100px;
 }
 
-.productPic{
+.productPic {
   width: auto;
-	height: auto;
-	content: url(./images/Product.png);
-	position: absolute;
-	top:20%;
-	left: 0;
-	right: 0;
-	margin: auto;
+  height: auto;
+  content: url(./images/Product.png);
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-
-
-
-

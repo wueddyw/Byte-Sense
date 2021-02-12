@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import './HomeTopBanner.css';
 
 export default function HomeTopBanner() {
     return (
