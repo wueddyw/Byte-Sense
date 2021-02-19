@@ -3,6 +3,7 @@ import StandardScanDetails from '../StandardScanDetails';
 import ExpertScanDetails from '../ExpertScanDetails';
 import '../../styles/product.css';
 import ProductTopBanner from "../ProductTopBanner"
+import Footer from "../Footer";
 
 
 
@@ -16,7 +17,7 @@ export default function Product() {
           <ExpertScanDetails></ExpertScanDetails>
         </div>
       </div>
-      
+      <Footer />
     </div>
   );
 }
