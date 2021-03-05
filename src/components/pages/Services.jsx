@@ -4,6 +4,7 @@ import '../../styles/services.css'
 import Service from '../ServicesPage/services.jsx';
 import ServiceBlocks from '../ServicesPage/ServiceBlocks';
 import ClickableServices from '../ServicesPage/ClickableServices';
+import Footer from '../Footer.js';
 
 export default function Services() {
   return (
@@ -14,6 +15,7 @@ export default function Services() {
       <Service/>
       <ServiceBlocks/>
       <ClickableServices/>
+      <Footer/>
     </div>
   );
 }

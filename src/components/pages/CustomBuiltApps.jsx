@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../styles/separate.css';
 
 export default function CustomBuiltApps() {
     return (
-        <div>
+        <div className="parentDiv">
             <h3>Custom-Built Applications</h3>
             <p>
                 We can custom-build applications for companies

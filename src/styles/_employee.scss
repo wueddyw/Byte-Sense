@@ -1,0 +1,32 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-wrapper
+{
+    @include flexCenter(column);
+
+    img
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid rgb(15, 76, 129);
+        margin-bottom: 10px;
+    }
+
+    h3
+    {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    p
+    {
+        font-size: 16px;
+    }
+}

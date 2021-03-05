@@ -75,7 +75,9 @@
 }
 
 .service-text {
-    padding: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vh;
     text-align: center;
 }
 

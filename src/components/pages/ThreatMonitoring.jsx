@@ -1,9 +1,10 @@
 import React from 'react';
+import '../../styles/separate.css';
 
 export default function ThreatMonitoring() {
     return (
-        <div>
-            <h3>Threat monitoring</h3>
+        <div className="parentDiv">
+            <h3>Threat Monitoring</h3>
             <p>
                 We can install our Cybersecurity tools and trusted applications
                 to monitor traffic and threat issues. We are confident that we

@@ -27,13 +27,13 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-image: url("../images/shutterstock2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
   height: 45vw;
   width: 100%;
+  margin-top: 80px;
 }
 
 .showcase h3 {
@@ -231,8 +231,8 @@ body {
           justify-content: center;
   justify-items: start;
   margin-top: 10vh;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #1b1b1b;
   color: white;
   padding-top: 40px;
@@ -240,7 +240,7 @@ body {
 }
 
 .column {
-  margin-left: 10vw;
+  margin-left: 5vw;
 }
 
 .column p {
@@ -272,5 +272,29 @@ body {
   border-top: 1px solid rgba(126, 125, 128, 0.2);
   color: white;
   font-size: 12px;
+}
+
+.fa {
+  padding: 12px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
 /*# sourceMappingURL=about.css.map */

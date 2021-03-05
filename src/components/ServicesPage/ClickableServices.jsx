@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import managedImage from '../../images/home/home-managed.png';
+import threatImage from '../../images/home/home-threat.png';
+import artificialImage from '../../images/home/home-artificial.png';
+import customImage from '../../images/home/home-custom.png';
 
 export default function ClickableServices() {
     return (
@@ -7,10 +11,7 @@ export default function ClickableServices() {
             <Link to = '/Managed-Detection-and-Response'>
                 <div className="service-child">
                     <div>
-                        <img src="https://via.placeholder.com/1200x600" />
-                    </div>
-                    <div className="service-text">
-                        <h3>Managed Detection and Response</h3>
+                        <img src={managedImage}/>
                     </div>
                 </div>
             </Link>
@@ -18,10 +19,7 @@ export default function ClickableServices() {
             <Link to = '/Threat-Monitoring'>
                 <div className="service-child">
                     <div>
-                        <img src="https://via.placeholder.com/1200x600" />
-                    </div>
-                    <div className="service-text">
-                        <h3>Threat monitoring</h3>
+                        <img src={threatImage} />
                     </div>
                 </div>
             </Link>
@@ -31,10 +29,7 @@ export default function ClickableServices() {
             <Link to = 'Combined-AI-and-Expert-Threat-Intelligence'>
                 <div className="service-child">
                     <div>
-                        <img src="https://via.placeholder.com/1200x600" />
-                    </div>
-                    <div className="service-text">
-                        <h3>Combined artificial intelligence (AI) and expert threat intelligence</h3>
+                        <img src={artificialImage} />
                     </div>
                 </div>
             </Link>
@@ -42,14 +37,10 @@ export default function ClickableServices() {
             <Link to = 'Custom-Built-Applications'>
                 <div className="service-child">
                     <div>
-                        <img src="https://via.placeholder.com/1200x600" />
-                    </div>
-                    <div className="service-text">
-                        <h3>Custom-Built Applications</h3>
+                        <img src={customImage} />
                     </div>
                 </div>
             </Link>
-
 
         </div>
     );

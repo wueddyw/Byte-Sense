@@ -1,11 +1,11 @@
 import React from 'react';
 import Footer from "../Footer";
 import '../../App.css';
-import '../../styles/managed.css';
+import '../../styles/separate.css';
 
 export default function ManagedDetectionResponse() {
     return (
-        <div id="parentDiv">
+        <div className="parentDiv">
             <div>
                 <h3>Managed Detection and Response</h3>
             </div>
