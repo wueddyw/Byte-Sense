@@ -1,0 +1,29 @@
+.news {
+  font-family: "PT Sans", sans-serif;
+}
+
+.news-header {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  background-color: #142955;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  font-family: "PT Sans", sans-serif;
+}
+
+.news-body {
+  text-align: center;
+  background-color: #142955;
+  padding-top: 100px;
+  padding-bottom: 500px;
+}
+
+.center {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}

@@ -24,7 +24,7 @@ function HomeAboutUsBar(props) {
         <div className="item item-center">
           <div className="break-free">
           <div className="break-free-header">
-              We are security experts
+              We Are Security Experts
               <div className="secure-div" style={secureImageStyle}/>
             </div>
             <div className="break-free-body">
