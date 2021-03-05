@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 import './HomeImageLinks.css';
-import imageLink1 from '../images/img-xxx.jpg';
+import managedImage from '../images/home/home-managed.png';
+import threatImage from '../images/home/home-threat.png';
+import artificialImage from '../images/home/home-artificial.png';
+import customImage from '../images/home/home-custom.png';
 
 function HomeImageLinks(props) {
 
@@ -12,12 +15,19 @@ function HomeImageLinks(props) {
         <>
   
 
-  <div className="bottom-bar">
+{/* <div className="blue-bar"></div> */}
+<div className="top-bar-header">Services</div>
+  <div className="frame">
 
-  {/* <img   src={imageLink1} alt="exp"/> */}
-
+    <span className="helper">
+      
+    </span>
+    <img className="image-link"  src={managedImage} alt="exp"/>
+    <img className="image-link"  src={threatImage} alt="exp"/>
+    <img className="image-link"  src={artificialImage} alt="exp"/>
+    <img className="image-link"  src={customImage} alt="exp"/>
   </div>
-          
+  <div className="blue-bar"></div>   
 
         </>
       );
