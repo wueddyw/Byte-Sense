@@ -3,10 +3,12 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import ServiceDropdown from "./ServicesPage/ServiceDropdown"
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [service, setService] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -27,8 +29,19 @@ function Navbar() {
     }
   };
 
+  const onServiceEnter = () => {
+    setService(true);
+  }
+
+  const onServiceLeave = () => {
+    setService(false);
+  }
+
   return (
     <>
+    <div className="navDiv">
+
+    </div>
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           Byte-Sense
@@ -51,10 +64,11 @@ function Navbar() {
             </Link>
           </li>
          
-          <li className='nav-item'>
+          <li className='nav-item' onMouseEnter={onServiceEnter} onMouseLeave={onServiceLeave}>
             <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
               Services
             </Link>
+            {service && <ServiceDropdown />}
           </li>
 
           <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
