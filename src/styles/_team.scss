@@ -1,0 +1,12 @@
+.team
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: around;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    row-gap: 60px;
+}

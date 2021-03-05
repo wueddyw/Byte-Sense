@@ -1,0 +1,26 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.value-wrapper
+{
+    @include flexCenter(column);
+
+    text-align: center;
+
+    h3
+    {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+
+    p
+    {
+        font-size: 18px;
+        padding-bottom: 5vh;
+    }
+}

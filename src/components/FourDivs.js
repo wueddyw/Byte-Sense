@@ -1,20 +1,20 @@
 import React from "react";
 
-function FourDivs() {
+function FourDivs(props) {
 
 	return (
-		<div className="four-div-container" data-aos="fade-up">
+		<div className="four-div-container" data-aos={props.direction}>
 
 			<div>
-				<h3>Services</h3>
+				<h3>{props.title}</h3>
 			</div>
 
 			<div className="spread">
 
-      	<div className="floating-div"><p>Detection & Response</p></div>
-      	<div className="floating-div"><p>Threat Monitoring</p></div>
-      	<div className="floating-div"><p>Artificial Intelligence</p></div>
-      	<div className="floating-div"><p>Custom Solutions</p></div>
+      			<div className="floating-div"><p>{props.div1}</p></div>
+      			<div className="floating-div"><p>{props.div2}</p></div>
+      			<div className="floating-div"><p>{props.div3}</p></div>
+      			<div className="floating-div"><p>{props.div4}</p></div>
 				
 			</div>
 		</div>
