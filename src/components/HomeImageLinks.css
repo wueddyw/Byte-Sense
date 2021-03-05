@@ -1,4 +1,41 @@
-.bottom-bar {
-  height: 400px;
-  background-color: #444444;
+.frame {
+  height: 450px;
+  width: 100%;
+  white-space: nowrap;
+  background-color: #333333;
+
+  text-align: center;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.image-link {
+  background: #333333;
+  vertical-align: middle;
+  max-height: 425px;
+  max-width: 425px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 40px;
+}
+
+.blue-bar {
+  height: 100px;
+  width: 100%;
+  background-color: #142955;
+}
+
+.top-bar-header {
+  font-size: 3em;
+  color: white;
+  padding-top: 10px;
+  background-color: #142955;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
