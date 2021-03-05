@@ -1,0 +1,15 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar
+{
+    @include flexCenter(column);
+
+    background-color: rgb(100, 100, 100);
+    color: white;
+}

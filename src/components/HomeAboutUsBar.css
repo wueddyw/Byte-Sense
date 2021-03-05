@@ -1,0 +1,70 @@
+.haub-float-div {
+  position: relative;
+  background-color: blueviolet;
+  border-radius: 25px;
+  padding: 20px;
+  width: 1050px;
+  top: -60px;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.haub-background {
+  background-color: #333333;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  background-color: #dddddd;
+}
+
+.item {
+  height: 700px;
+  width: 0px; /* A fixed width as the default */
+}
+
+.item-left {
+  background-color: #333333;
+  background-image: linear-gradient(to right, #eeeeee, #dddddd);
+  flex-grow: 1; /* Set the middle element to grow and stretch */
+}
+
+.item-center {
+  background-color: #f7f7f7;
+  width: 1000px;
+  border-radius: 25px;
+}
+
+.item-right {
+  background-color: #333333;
+  background-image: linear-gradient(to right, #dddddd, #eeeeee);
+  flex-grow: 1; /* Set the middle element to grow and stretch */
+}
+
+.break-free {
+  position: relative;
+  top: -70px;
+  background-color: #f7f7f7;
+  height: inherit;
+  border-radius: 25px;
+  padding: 100px;
+}
+
+.break-free-header {
+  font-size: 3em;
+}
+
+.break-free-body {
+  line-height: 200%;
+  padding-top: 3em;
+  font-size: 2em;
+  padding-top: 100px;
+}
+
+.secure-div {
+  height: 212px;
+  width: 212px;
+  float: right;
+}

@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+.home-top-banner,
+
+.products,
+.contact-us,
+.sign-up,
+.marketing {
+  height: 70vh;
+  display: flex;
+}
+
+.services {
+  background-image: url("./images/img-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.products {
+  background-image: url("./images/img-3.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.contact-us {
+  background-image: url("./images/img-4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.sign-up {
+  background-image: url("./images/img-7.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.marketing {
+  background-image: url("./images/img-6.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.product {
+  font-size: 100px;
+  padding-top: 100px;
+}
+
+.standardScan,
+.expertScan {
+  font-size: 50px;
+  padding-top: 100px;
+}
+
+

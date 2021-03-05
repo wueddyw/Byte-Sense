@@ -1,0 +1,18 @@
+#header-services {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/services_back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+}
+
+#header-services h3 {
+    color: #fff;
+    font-size: 55px;
+}
