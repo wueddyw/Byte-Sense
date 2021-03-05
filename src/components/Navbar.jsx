@@ -82,6 +82,18 @@ function Navbar() {
             </Link>
           </li>
 
+          <li className='nav-item'>
+              <div class="lang-menu">
+                <div class="selected-lang">English
+                </div>
+                <ul>
+                  <li>
+                    <a>Chinese</a>
+                  </li>
+                </ul>
+              </div>
+          </li>
+
 
 
         </ul>
