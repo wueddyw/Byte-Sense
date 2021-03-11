@@ -7,7 +7,7 @@ import customImage from '../../images/home/home-custom.png';
 
 export default function ServiceBlocks() {
     return (
-        <div className="four-services">
+        <div className="four-services" data-aos="fade-up">
             <div className="service-child">
                 <div>
                     <img src={managedImage} />
