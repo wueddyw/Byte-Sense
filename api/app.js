@@ -7,12 +7,10 @@ var cors = require("cors");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 testAPIRouter = require("./routes/testAPI");
-<<<<<<< HEAD
 var productRouter = require("./routes/productRoute");
-=======
+var cartRouter = require("./routes/cartRoute");
 const connectDB = require("./db/DBConnection");
 const dbUserRouter = require("./routes/User");
->>>>>>> 8e9f718067c7092038db2eda05cfc10aa0611cbb
 var app = express();
 
 // view engine setup
@@ -35,7 +33,8 @@ app.use("/userModel", dbUserRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testAPI',testAPIRouter);
-app.use('./products', productRouter);
+app.use('/products', productRouter);
+app.use('/cart', cartRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
