@@ -8,6 +8,10 @@ const productSchema = mongoose.Schema({
     features: {
         type: String,
     },
+    price: {
+        type: String,
+        required: [true, "Please include the product price"],
+    },
 });
 
 const Product = mongoose.model("Product", productSchema);

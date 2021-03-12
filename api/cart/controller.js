@@ -17,6 +17,7 @@ exports.addItemToCart = async (req, res) => {
         }
         //--If Cart Exists ----
         if (cart) {
+            console.log("if cart");
             //---- Check if index exists ----
             const indexFound = cart.items.findIndex(item => item.productId.id == productId);
             //------This removes an item from the the cart if the quantity is set to zero, We can use this method to remove an item from the list  -------
@@ -61,6 +62,7 @@ exports.addItemToCart = async (req, res) => {
         }
         //------------ This creates a new cart and then adds the item to the cart that has been created------------
         else {
+            console.log("else cart");
             const cartData = {
                 items: [{
                     productId: productId,

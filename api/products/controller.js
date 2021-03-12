@@ -3,7 +3,8 @@ exports.createProduct = async (req, res) => {
     try {
         let payload = {
             name: req.body.name,
-            features: req.body.features
+            features: req.body.features,
+            price: req.body.price
         }
         let product = await productRepository.createProduct({
             ...payload
