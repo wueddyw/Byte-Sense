@@ -3,11 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors=require("cors");
+var cors = require("cors");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 testAPIRouter = require("./routes/testAPI");
+<<<<<<< HEAD
 var productRouter = require("./routes/productRoute");
+=======
+const connectDB = require("./db/DBConnection");
+const dbUserRouter = require("./routes/User");
+>>>>>>> 8e9f718067c7092038db2eda05cfc10aa0611cbb
 var app = express();
 
 // view engine setup
@@ -20,6 +25,12 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// DB STUFF
+connectDB();
+app.use(express.json({ extended:false }));
+// the path for the usermodel???
+app.use("/userModel", dbUserRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
