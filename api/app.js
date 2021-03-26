@@ -3,10 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors=require("cors");
+var cors = require("cors");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 testAPIRouter = require("./routes/testAPI");
+var productRouter = require("./routes/productRoute");
+var cartRouter = require("./routes/cartRoute");
+const connectDB = require("./db/DBConnection");
+const dbUserRouter = require("./routes/User");
 var app = express();
 
 // view engine setup
@@ -20,9 +24,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// DB STUFF
+connectDB();
+app.use(express.json({ extended:false }));
+// the path for the usermodel???
+app.use("/userModel", dbUserRouter);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testAPI',testAPIRouter);
+app.use('/products', productRouter);
+app.use('/cart', cartRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

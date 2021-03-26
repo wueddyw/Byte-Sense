@@ -74,6 +74,22 @@
     height: auto;
 }
 
+.service-child-click {
+    flex: 1 1 0;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border: 1px solid;
+}
+
+.service-child-click img {
+    width: 100%;
+    height: auto;
+}
+
+.service-child-click:hover {
+    transform: scale(1.05, 1.05);
+}
+
 .service-text {
     padding-left: 1vw;
     padding-right: 1vw;

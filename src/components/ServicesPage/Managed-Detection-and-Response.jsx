@@ -7,7 +7,7 @@ export default function ManagedDetectionResponse() {
     return (
         <div className="parentDiv">
             <div>
-                <h3>Managed Detection and Response</h3>
+                <h1>Managed Detection and Response</h1>
             </div>
             <div>
                 <p>

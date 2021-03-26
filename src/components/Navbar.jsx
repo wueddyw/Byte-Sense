@@ -94,6 +94,12 @@ function Navbar() {
           </li>
 
           <li className='nav-item'>
+            <Link to='/Cart' className='nav-links' onClick={closeMobileMenu}>
+              Cart
+            </Link>
+          </li>
+
+          <li className='nav-item'>
               <div class="lang-menu">
                 <div class="selected-lang">English
                 </div>

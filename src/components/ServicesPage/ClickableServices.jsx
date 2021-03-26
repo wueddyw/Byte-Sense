@@ -7,9 +7,9 @@ import customImage from '../../images/home/home-custom.png';
 
 export default function ClickableServices() {
     return (
-        <div className="four-services">
+        <div className="four-services" data-aos="fade-up">
             <Link to = '/Managed-Detection-and-Response'>
-                <div className="service-child">
+                <div className="service-child-click">
                     <div>
                         <img src={managedImage}/>
                     </div>
@@ -17,7 +17,7 @@ export default function ClickableServices() {
             </Link>
 
             <Link to = '/Threat-Monitoring'>
-                <div className="service-child">
+                <div className="service-child-click">
                     <div>
                         <img src={threatImage} />
                     </div>
@@ -27,7 +27,7 @@ export default function ClickableServices() {
 
 
             <Link to = 'Combined-AI-and-Expert-Threat-Intelligence'>
-                <div className="service-child">
+                <div className="service-child-click">
                     <div>
                         <img src={artificialImage} />
                     </div>
@@ -35,7 +35,7 @@ export default function ClickableServices() {
             </Link>
 
             <Link to = 'Custom-Built-Applications'>
-                <div className="service-child">
+                <div className="service-child-click">
                     <div>
                         <img src={customImage} />
                     </div>

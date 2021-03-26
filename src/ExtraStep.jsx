@@ -12,10 +12,11 @@ import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
-import ManagedDetectionResponse from './components/pages/Managed-Detection-and-Response';
-import CustomBuiltApps from './components/pages/CustomBuiltApps';
-import CombinedAI from './components/pages/CombinedAI';
-import ThreatMonitoring from './components/pages/ThreatMonitoring';
+import ManagedDetectionResponse from './components/ServicesPage/Managed-Detection-and-Response';
+import CustomBuiltApps from './components/ServicesPage/CustomBuiltApps';
+import CombinedAI from './components/ServicesPage/CombinedAI';
+import ThreatMonitoring from './components/ServicesPage/ThreatMonitoring';
+import Cart from './components/pages/Cart';
 import AOS from "aos";
 import "aos/dist/aos.css"
 
@@ -42,6 +43,7 @@ function ExtraStep() {
         <Route path='/Custom-Built-Applications' component={CustomBuiltApps}/>
         <Route path='/Combined-AI-and-Expert-Threat-Intelligence' component={CombinedAI} />
         <Route path='/Threat-Monitoring' component={ThreatMonitoring} />
+        <Route path='/Cart' component={Cart} />
       </Switch>
     </Router>
   );
