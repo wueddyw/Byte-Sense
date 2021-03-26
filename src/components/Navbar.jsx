@@ -3,10 +3,12 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import ServiceDropdown from "./ServicesPage/ServiceDropdown"
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [service, setService] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -26,6 +28,14 @@ function Navbar() {
       setDropdown(false);
     }
   };
+
+  const onServiceEnter = () => {
+    setService(true);
+  }
+
+  const onServiceLeave = () => {
+    setService(false);
+  }
 
   return (
     <>
@@ -51,10 +61,11 @@ function Navbar() {
             </Link>
           </li>
          
-          <li className='nav-item'>
+          <li className='nav-item' onMouseEnter={onServiceEnter} onMouseLeave={onServiceLeave}>
             <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
               Services
             </Link>
+            {service && <ServiceDropdown />}
           </li>
 
           <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
@@ -79,6 +90,12 @@ function Navbar() {
           <li className='nav-item'>
             <Link to='/Contact' className='nav-links' onClick={closeMobileMenu}>
               Contact
+            </Link>
+          </li>
+
+          <li className='nav-item'>
+            <Link to='/Cart' className='nav-links' onClick={closeMobileMenu}>
+              Cart
             </Link>
           </li>
 

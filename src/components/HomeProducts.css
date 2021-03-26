@@ -108,3 +108,26 @@
   font-size: 1.3em;
   padding-bottom: 50px;
 }
+
+@media only screen and (max-width: 1500px) {
+  .grid-control {
+    grid-column-gap: 3vw;
+    grid-row-gap: 7vw;
+    width: auto;
+    font-size: 2.3vw;
+    line-height: 2;
+  }
+
+  .product-top-left {
+    max-height: 60vw;
+    max-width: 60vw;
+  }
+
+  .flex-center:nth-child(1) {
+    height: 50vw;
+  }
+
+  .grid-bottom-left {
+    padding-left: 2vw;
+  }
+}

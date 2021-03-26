@@ -4,6 +4,8 @@ import './News.css';
 
 import newsImage1 from './News Components/Images/news1.jpg';
 import newsHeaderImage from './News Components/Images/news_header.png';
+import { NewsContextProvider } from '../NewsContext';
+import { GetNews } from '../GetNews';
 
 export default function Marketing() {
   const secureImageStyle={
@@ -22,8 +24,14 @@ export default function Marketing() {
             News
           </div>
         </div>
+        <div className="news-page-item-break"/>
+
+      <NewsContextProvider>
+        <GetNews/>
+      </NewsContextProvider>
 
 
+{/* 
         <div className="news-page-body">
           <div className="news-page-body-item news-page-text-div">
             <p  className="news-page-item-body">
@@ -99,7 +107,7 @@ export default function Marketing() {
           </div>
         </div>
 
-        <div className="news-page-item-break"/>
+        <div className="news-page-item-break"/> */}
 
 
 
