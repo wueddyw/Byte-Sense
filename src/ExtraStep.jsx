@@ -12,6 +12,7 @@ import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
+import Login from './components/pages/Login';
 import ManagedDetectionResponse from './components/ServicesPage/Managed-Detection-and-Response';
 import CustomBuiltApps from './components/ServicesPage/CustomBuiltApps';
 import CombinedAI from './components/ServicesPage/CombinedAI';
@@ -39,6 +40,7 @@ function ExtraStep() {
         <Route path='/Contact' component={Contact} />
         <Route path = '/StandardScan' component={StandardScan}/>
         <Route path = '/ExpertScan' component={ExpertScan}/>
+        <Route path='/Login' component={Login} />
         <Route path='/Managed-Detection-and-Response' component={ManagedDetectionResponse}/>
         <Route path='/Custom-Built-Applications' component={CustomBuiltApps}/>
         <Route path='/Combined-AI-and-Expert-Threat-Intelligence' component={CombinedAI} />
