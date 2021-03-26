@@ -297,4 +297,91 @@ body {
   background: #55ACEE;
   color: white;
 }
+
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 120px 30vw 5vh 30vw;
+  padding: 25px 25px 25px 25px;
+  border: 1px solid rgba(230, 230, 230, 0.4);
+  -webkit-box-shadow: 0px 10px 10px #888888;
+          box-shadow: 0px 10px 10px #888888;
+}
+
+.login-container h3 {
+  font-size: 28px;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28659a;
+  color: white;
+}
+
+.login button:hover {
+  background-color: #0f4c81;
+}
+
+.field-name {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.field {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.field input[type=text] {
+  width: 100%;
+  margin: 0 0 0 0;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  padding: 12px 20px;
+}
+
+.field #email {
+  margin: 0 0 0 0;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+.field input[type=password] {
+  width: 100%;
+  margin: 0 0 0 0;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  padding: 12px 20px;
+}
+
+.field #password {
+  margin: 0 0 0 0;
+  padding: 6px 20px;
+  width: 100%;
+}
 /*# sourceMappingURL=about.css.map */

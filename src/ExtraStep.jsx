@@ -12,6 +12,7 @@ import Career from './components/pages/Career';
 import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
+import Login from './components/pages/Login';
 import AOS from "aos";
 import "aos/dist/aos.css"
 
@@ -34,6 +35,7 @@ function ExtraStep() {
         <Route path='/Contact' component={Contact} />
         <Route path = '/StandardScan' component={StandardScan}/>
         <Route path = '/ExpertScan' component={ExpertScan}/>
+        <Route path='/Login' component={Login} />
       </Switch>
     </Router>
   );

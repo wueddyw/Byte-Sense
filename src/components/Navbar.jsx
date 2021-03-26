@@ -94,7 +94,11 @@ function Navbar() {
               </div>
           </li>
 
-
+          <li className='nav-item'>
+            <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
+              Login
+            </Link>
+          </li>
 
         </ul>
 
