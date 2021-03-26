@@ -8,7 +8,7 @@ const connectDB = async () =>
         useNewUrlParser: true 
     });
 
-    console.log("MongoDB Connected");
+    console.log("Connected to database");
 };
 
 module.exports = connectDB;
