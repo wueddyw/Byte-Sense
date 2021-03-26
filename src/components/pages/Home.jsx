@@ -7,6 +7,10 @@ import HomeAboutUsBar from '../HomeAboutUsBar';
 import HomeImageLinks from '../HomeImageLinks';
 import HomeProducts from '../HomeProducts';
 import Footer from "../Footer";
+
+import { NewsContextProviderHome } from '../NewsContext';
+import { GetNews } from '../GetNews';
+
 import './Home.css';
 import zoomImage01 from '../../images/home/home-news.png';
 export default function Home() {
@@ -35,9 +39,12 @@ export default function Home() {
 
         <div className="news-body">
 
+        <NewsContextProviderHome>
+        <GetNews/>
+      </NewsContextProviderHome>
 
 
-
+{/* 
         <div>
         <TrackVisibility once={true} >
           <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
@@ -65,7 +72,7 @@ export default function Home() {
           <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
         </TrackVisibility>
         </div>
-        
+         */}
 
 
       </div>
@@ -89,6 +96,7 @@ export default function Home() {
         </div> */}
 
       </div>
+
 
 
       <Footer/>
