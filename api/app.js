@@ -10,7 +10,7 @@ testAPIRouter = require("./routes/testAPI");
 var productRouter = require("./routes/productRoute");
 var cartRouter = require("./routes/cartRoute");
 const connectDB = require("./db/DBConnection");
-const dbUserRouter = require("./routes/User");
+const dbUserRouter = require("./routes/signin");
 var app = express();
 
 // view engine setup
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 connectDB();
 app.use(express.json({ extended:false }));
 // the path for the usermodel???
-app.use("/userModel", dbUserRouter);
+app.use("/", dbUserRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
