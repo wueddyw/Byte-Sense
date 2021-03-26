@@ -8,5 +8,5 @@ exports.cart = async () => {
 };
 exports.addItem = async payload => {
     const newItem = await Cart.create(payload);
-    return newItem
+    return newItem;
 }

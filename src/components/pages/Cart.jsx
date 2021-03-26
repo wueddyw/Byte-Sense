@@ -28,6 +28,24 @@ export default function Cart(props) {
             console.log(err);
         }
     }
+    const deleteItemFromCart = async (id) => {
+        try {
+            const res = await fetch("http://localhost:9000/cart/remove-item", {
+                method: "DELETE",
+                body: JSON.stringify({
+                    productId: id,
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8",
+                },
+            });
+            await res.json();
+            fetchData();
+            props.history.push("/Cart")
+        } catch (err) {
+            console.log(err);
+        }
+    }
     useEffect(() => {
         fetchData();
     }, []);
@@ -46,6 +64,9 @@ export default function Cart(props) {
                         <tr key={item.productId._id}>
                             <td>{item.productId.name}</td>
                             <td>{item.productId.price}</td>
+                            <td>
+                                <button onClick={(e) => deleteItemFromCart(item.productId._id)}>Remove From Cart</button>
+                            </td>
                         </tr>
                     ))}
                     <tr>

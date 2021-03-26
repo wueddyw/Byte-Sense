@@ -9,7 +9,7 @@ exports.addItemToCart = async (req, res) => {
     try {
         let cart = await cartRepository.cart();
         let productDetails = await productRepository.productById(productId);
-             if (!productDetails) {
+        if (!productDetails) {
             return res.status(500).json({
                 type: "Not Found",
                 msg: "Invalid request"
@@ -125,5 +125,45 @@ exports.emptyCart = async (req, res) => {
             msg: "Something went wrong",
             err: err
         })
+    }
+}
+
+exports.removeItemFromCart = async (req, res) => {
+    const {
+        productId
+    } = req.body;
+    try {
+        let cart = await cartRepository.cart();
+        let productDetails = await productRepository.productById(productId);
+        if (!productDetails) {
+            return res.status(500).json({
+                type: "Not Found",
+                msg: "Invalid request"
+            })
+        }
+        //--If Cart Exists ----
+        if (cart) {
+            console.log("if cart");
+            //---- Check if index exists ----
+            const indexFound = cart.items.findIndex(item => item.productId.id == productId);
+            if (indexFound !== -1) {
+                cart.items.splice(indexFound, 1);
+                cart.subTotal -= 1;
+            }
+            else {
+                return res.status(400).json({
+                    type: "Invalid",
+                    msg: "Invalid request"
+                })
+            }
+            let data = await cart.save();
+            res.status(200).json({
+                type: "success",
+                mgs: "Removed item from cart",
+                data: data
+            })
+        }
+    } catch (err) {
+        console.log(err);
     }
 }
