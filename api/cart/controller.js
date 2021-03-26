@@ -31,7 +31,6 @@ exports.addItemToCart = async (req, res) => {
             }
             //----------Check if product exist, just add the previous quantity with the new quantity and update the total price-------
             else if (indexFound !== -1) {
-                cart.items[indexFound].quantity = cart.items[indexFound].quantity + quantity;
                 cart.items[indexFound].total = cart.items[indexFound].quantity * productDetails.price;
                 cart.items[indexFound].price = productDetails.price
                 cart.subTotal = cart.items.map(item => item.total).reduce((acc, next) => acc + next);
