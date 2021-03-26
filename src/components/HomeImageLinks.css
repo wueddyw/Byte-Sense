@@ -16,8 +16,8 @@
 .image-link {
   background: #333333;
   vertical-align: middle;
-  max-height: 425px;
-  max-width: 425px;
+  width: 325px;
+
   cursor: pointer;
   padding-left: 20px;
   padding-right: 20px;
@@ -38,4 +38,44 @@
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .image-link {
+    background: #333333;
+    width: 30vw;
+    cursor: pointer;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 4vw;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+  }
+
+  .frame {
+    height: 95vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #333333;
+
+    text-align: center;
+  }
+
+  .blue-bar {
+    display: inline-block;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    display: none;
+  }
+
+  .helper {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+  }
 }

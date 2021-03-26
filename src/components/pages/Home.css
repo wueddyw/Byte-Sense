@@ -5,6 +5,7 @@
 .news-header {
   text-align: center;
   height: 100px;
+  padding-bottom: 100px;
   width: 100%;
   background-color: #142955;
   font-size: 3em;
@@ -15,9 +16,8 @@
 
 .news-body {
   text-align: center;
-  background-color: #142955;
+  background-color: white;
   padding-top: 100px;
-  padding-bottom: 500px;
 }
 
 .center {
@@ -26,4 +26,21 @@
   margin: 0 auto;
   padding: 10px;
   position: relative;
+}
+
+@media only screen and (max-width: 1500px) {
+  .news-header {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    font-family: "PT Sans", sans-serif;
+    padding-top: 100px;
+  }
+
+  .news-page-image-div {
+    display: none;
+  }
 }
