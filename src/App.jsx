@@ -86,9 +86,9 @@ class App extends React.Component{
     return (
         <div>
                <ExtraStep></ExtraStep>
-          <p>
+          {/* <p>
             {this.state.apiResponse}
-          </p>
+          </p> */}
         </div>
     );
   }
