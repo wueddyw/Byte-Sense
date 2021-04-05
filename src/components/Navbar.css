@@ -30,7 +30,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(9, auto);
+  grid-template-columns: repeat(10, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -69,16 +69,24 @@
   display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   .NavbarItems {
     position: relative;
+  }
+
+  .nav-item {
+    height: 6vh;
+  }
+
+  .navbar {
+    font-size: 3vw;
   }
 
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90vh;
+    width: 00%;
+    height: 100vh;
     position: absolute;
     top: 80px;
     left: -80%;
@@ -92,6 +100,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    width: 100%;
   }
 
   .nav-links {
@@ -126,6 +135,7 @@
   .fa-times {
     color: #fff;
     font-size: 2rem;
+    height: 10px;
   }
 
   .nav-links-mobile {

@@ -1,20 +1,24 @@
 .home-top-banner {
-  background-image: url("../images/img-1.jpg");
+  /* background-image: url("../images/img-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 1650px;
-  display: flex;
-  /* margin-bottom: 1000px; */
-  padding-top: 100px;
+  
+  padding-top: 100px; */
+
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  width: 100%;
 }
 
 .home-top-banner-slogan {
   color: #fff;
   font-size: 4.5em;
   justify-content: left;
-  padding-top: 40px;
-  padding-left: 7vw;
+  margin-top: 40px;
+  margin-left: 7vw;
   position: absolute;
   z-index: 1;
 }
@@ -29,12 +33,22 @@
   z-index: 1;
 }
 
+.home-video-banner {
+  padding-top: 80px;
+}
+
+.home-video-video {
+  padding: 0px;
+  margin: 0px;
+}
+
 @media only screen and (max-width: 1500px) {
   .home-top-banner {
     height: 120vw;
     display: flex;
     /* margin-bottom: 1000px; */
-    padding-top: 100px;
+    padding-top: 80px;
+    top: 6vw;
   }
 
   .home-top-banner-slogan {
