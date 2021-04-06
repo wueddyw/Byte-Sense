@@ -16,7 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 45vw;
+    height: 80vh;
     width: 100%;
     margin-top: 80px;
 
@@ -24,9 +24,13 @@
     {
         font-size: 55px;
         font-family: "PT Sans", sans-serif;
+        text-shadow: 1.5px 1.5px #000000;
+
         // color: white;
         // color: rgb(15, 76, 129);
     }
+
+    
 }
 
 .showcase-text
