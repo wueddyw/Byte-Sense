@@ -65,7 +65,7 @@ export default function Cart(props) {
                             <td>{item.productId.name}</td>
                             <td>{item.productId.price}</td>
                             <td>
-                                <button onClick={(e) => deleteItemFromCart(item.productId._id)}>Remove From Cart</button>
+                                <button onClick={(e) => deleteItemFromCart(item.productId._id)}>Remove</button>
                             </td>
                         </tr>
                     ))}

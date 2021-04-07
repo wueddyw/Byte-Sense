@@ -6,7 +6,7 @@ import Footer from '../Footer.js';
 
 export default function Services() {
   return (
-    <div>
+    <div className="service-body">
       <header id="header-services">
         <h3>Services</h3>
       </header>
