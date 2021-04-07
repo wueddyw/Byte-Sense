@@ -4,7 +4,6 @@
 }
 
 #supportForm {
-    display: grid;
     padding: 1vw;
 }
 
@@ -12,33 +11,22 @@
     font-size: 3vw;
 }
 
-#mess {
-    padding: 0.2vw;
-    margin: 1vw;
+.formInput {
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+    padding: 0.5vw;
+    width: 100%;
+}
+
+.message {
     height: 30vh;
-    width: 50%;
+    width: 100%;
     resize: none;
-}
-
-#email {
-    padding: 0.2vw;
-    margin: 1vw;
-    height: 3vh;
-    width: 35%;
-}
-
-#name {
-    padding: 0.2vw;
-    margin: 1vw;
-    height: 3vh;
-    width: 35%;
-}
-
-#submitBtn {
-    padding: 0.2vw;
-    margin: 1vw;
-    height: 3vh;
-    width:8%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+    padding: 0.5vw;
 }
 
 #header {
@@ -68,4 +56,24 @@
     margin-top: 1vh;
     margin-left: 1vw;
     display: inline-block;
+}
+
+.formDiv {
+    padding: 1vh 1vw 1vh 1vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.formDiv h3 {
+    text-align: center;
+}
+
+#buttonDiv {
+    text-align: center;
+}
+
+#submitBtn {
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0.5vh;
 }

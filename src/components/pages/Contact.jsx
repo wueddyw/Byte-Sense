@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/contact.css';
 import ContactInfo from '../ContactPage/ContactInfo';
 import SupportForm from '../ContactPage/SupportForm';
+import Footer from '../Footer.js';
 
 
 export default function SignUp() {
@@ -14,6 +15,7 @@ export default function SignUp() {
                 <ContactInfo/>
                 <SupportForm/>
             </div>
+            <Footer/>
         </div>
     );
 }
