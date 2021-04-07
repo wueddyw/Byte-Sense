@@ -331,13 +331,16 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* margin-bottom: 1000px; */
   padding-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 6em;
+  text-shadow: 2px 2px black;
   width: 100%;
 }
 
