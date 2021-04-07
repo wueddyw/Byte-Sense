@@ -1,8 +1,8 @@
 import React from 'react';
-import Detection from "../../images/detection.jpg";
-import Threat from "../../images/threat-monitor.jpg";
-import AI from "../../images/ai.jpg";
-import CustomApp from "../../images/custom-app.jpg";
+import Detection from "../images/detection.jpg";
+import Threat from "../images/threat-monitor.jpg";
+import AI from "../images/ai.jpg";
+import CustomApp from "../images/custom-app.jpg";
 
 export default function Service() {
     return (
