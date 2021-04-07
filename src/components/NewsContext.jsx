@@ -12,7 +12,7 @@ export const NewsContextProvider = (props) => {
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
     useEffect(()=>{
-        axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6`
+        axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6`
         , {headers: {'X-Api-Key': `${apiKey}`}})
         .then(response=> setData(response.data))
         .catch(error=>console.log(error));
@@ -37,7 +37,7 @@ export const NewsContextProviderHome = (props) => {
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
     useEffect(()=>{
-        axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=1`
+        axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=1`
         , {headers: {'X-Api-Key': `${apiKey}`}})
         .then(response=> setData(response.data))
         .catch(error=>console.log(error));
