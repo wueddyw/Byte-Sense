@@ -3,7 +3,7 @@ import React from "react";
 function ImageTextDivRight(props) {
   return (
     <div>
-      <div className="what-we-do" data-aos={props.direction}>
+      <div className="what-we-do-right" data-aos={props.direction}>
         <div className="image">
           <img src={props.image} />
         </div>

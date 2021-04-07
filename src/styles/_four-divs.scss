@@ -9,6 +9,8 @@
 
 @mixin grid()
 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
 }
 
@@ -16,8 +18,11 @@
 {
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 8vh;
+    margin-bottom: 0vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: rgb(240, 240, 240);
 
     h3
     {
@@ -59,5 +64,35 @@
         border: 1px solid rgb(15, 76, 129);
         background: rgb(15, 76, 129);
         color: white;
+    }
+}
+
+// For Tablets
+@media screen and (max-width: 768px)
+{
+    .spread
+    {
+        @include grid();
+    }
+
+    .floating-div
+    {
+        width: 33vw;
+    }
+}
+
+// For Mobile
+@media screen and (max-width: 600px)
+{
+    .spread
+    {
+        @include flexCenter(column);
+
+        justify-content: space-evenly;
+    }
+
+    .floating-div
+    {
+        width: 60vw;
     }
 }

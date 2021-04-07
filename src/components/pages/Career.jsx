@@ -1,6 +1,7 @@
 import React from 'react';
 import Showcase from "../Showcase";
 import TextDiv from "../TextDiv";
+import TextDivAlt from "../TextDivAlt";
 import Footer from "../Footer";
 import TripImage from "../TripleImageSpread";
 import Values from "../Values";
@@ -16,7 +17,7 @@ import userImage from "../../images/user.png";
 export default function Products() {
   return (
     <div className="wrapper">
-      <Showcase image={image} text="Careers" />
+      <Showcase image={image} title="Careers" text="Build a career at the cutting edge of cyber security"/>
       <TextDiv title="Building a safe and secure future" direction="fade-up"
         content="Byte Sense was formed with one mission in mind - to provide the world
         with a safer place in the cyberspace. We provide customers with our
@@ -29,14 +30,14 @@ export default function Products() {
         remediations, malicious monitoring, upgrades of computer systems, and
         custom-built applications." />
       <TripImage direction="fade-up" image1={image4} image2={image5} image3={image6} />
-      <TextDiv title="Our mission and values" direction="fade-up"
+      <TextDivAlt title="Our mission and values" direction="fade-up"
         content="Byte Sense is a place where people can connect, grow, and make an 
-        impact. Whether it is ... or ..., these are our guiding principles:" />
+        impact. Whether it is to pursue excellence, or to build a community, these are our guiding principles:" />
       <Values direction="fade-up" values="Passion" description="Lorem ipsum amet dolar" />
       <Values direction="fade-up" values="Creativity" description="Lorem ipsum amet dolar" />
       <Values direction="fade-up" values="Loyalty" description="Lorem ipsum amet dolar" />
       <Values direction="fade-up" values="Respect" description="Lorem ipsum amet dolar" />
-      <TextDiv title="Departments" direction="fade-up" content="Lorem ipsum dolor sit amet,
+      <TextDivAlt title="Departments" direction="fade-up" content="Lorem ipsum dolor sit amet,
         consectetur adipiscing elit. Nunc eu efficitur lorem. In ac sodales lectus. Maecenas 
         vel condimentum orci, non feugiat turpis. Integer vitae gravida est, vel varius urna. 
         Aliquam ultrices vitae risus eu luctus. Integer interdum lorem at feugiat scelerisque. 
