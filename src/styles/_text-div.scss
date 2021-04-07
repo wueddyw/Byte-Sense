@@ -8,24 +8,56 @@
 
 .our-story
 {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
     @include flexCenter(column);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 8vh;
+    border-bottom: 1px solid rgba(125, 125, 125, 0.2);
 
     p
     {
         font-size: 16px;
-        color: rgb(15, 76, 129);
+        color: rgb(0, 50, 92);
         line-height: 1.7em;
-        padding-left: 10vw;
-        padding-right: 10vw;
+        padding-left: 0vw;
+        padding-right: 0vw;
     }
 
     h3
     {
         font-size: 44px;
         // font-weight: normal;
-        color: rgb(15, 76, 129);
+        color: rgb(0, 50, 92);
+        margin-bottom: 3vh;
+    }
+}
+
+.our-story-alt
+{
+    @include flexCenter(column);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 8vh;
+    border-top: 1px solid rgba(125, 125, 125, 0.2);
+
+    p
+    {
+        font-size: 16px;
+        color: rgb(0, 50, 92);
+        line-height: 1.7em;
+        padding-left: 0vw;
+        padding-right: 0vw;
+    }
+
+    h3
+    {
+        font-size: 44px;
+        // font-weight: normal;
+        color: rgb(0, 50, 92);
         margin-bottom: 3vh;
     }
 }

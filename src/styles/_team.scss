@@ -8,5 +8,22 @@
     align-items: center;
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-bottom: 8vh;
     row-gap: 60px;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .team
+    {
+        grid-template-columns: 1fr 1fr;   
+    } 
+}
+
+@media screen and (max-width: 600px) 
+{
+    .team
+    {
+        grid-template-columns: 1fr;   
+    } 
 }
