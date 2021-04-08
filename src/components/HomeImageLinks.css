@@ -1,5 +1,5 @@
 .frame {
-  height: 450px;
+  height: 325px;
   width: 100%;
   white-space: nowrap;
   background-color: #333333;
@@ -21,7 +21,6 @@
   cursor: pointer;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 40px;
 }
 
 .blue-bar {
@@ -38,16 +37,17 @@
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  text-shadow: 2px 2px black;
+  font-family: "Raleway";
 }
 
 @media only screen and (max-width: 1500px) {
   .image-link {
     background: #333333;
-    width: 30vw;
+    width: 45vw;
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-    border-radius: 4vw;
 
     display: block;
     margin-left: auto;
@@ -56,7 +56,7 @@
   }
 
   .frame {
-    height: 95vw;
+    height: 75vw;
     padding-top: 5vw;
     padding-bottom: 5vw;
     width: 100%;
@@ -64,6 +64,12 @@
     background-color: #333333;
 
     text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   .blue-bar {
@@ -77,5 +83,25 @@
     display: inline-block;
     height: auto;
     vertical-align: middle;
+    display: none;
+  }
+
+  .top-bar-header {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 10vw;
+  }
+
+  .home-image-links-1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .home-image-links-2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .home-image-links-3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .home-image-links-4 {
+    grid-area: 2 / 2 / 3 / 3;
   }
 }

@@ -7,10 +7,12 @@
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  text-shadow: 2px 2px black;
+  font-family: "PT-Sans";
 }
 
 .grid-holder-outside {
-  background-color: #6b6b6b;
+  background-color: #f0f0f0;
   text-align: center;
 }
 
@@ -23,7 +25,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 50px;
-  grid-row-gap: 100px;
+  grid-row-gap: 0px;
   background-color: #aaaaaa;
   width: 1400px;
   font-size: 2.3em;
@@ -87,7 +89,7 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  height: 700px;
+  height: 650px;
 }
 
 .product-top-left {
@@ -107,12 +109,14 @@
 .title-header {
   font-size: 1.3em;
   padding-bottom: 50px;
+  color: #00325c;
+  font-family: "PT-Sans";
 }
 
 @media only screen and (max-width: 1500px) {
   .grid-control {
     grid-column-gap: 3vw;
-    grid-row-gap: 7vw;
+    grid-row-gap: 0vw;
     width: auto;
     font-size: 2.3vw;
     line-height: 2;
@@ -124,10 +128,40 @@
   }
 
   .flex-center:nth-child(1) {
-    height: 50vw;
+    height: 55vw;
   }
 
   .grid-bottom-left {
     padding-left: 2vw;
+  }
+
+  .title-header {
+    font-size: 2em;
+    padding-bottom: 3vw;
+    line-height: 1;
+  }
+
+  .hBreaker {
+    background-color: #142955;
+
+    font-size: 10vw;
+    color: white;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    text-shadow: 2px 2px black;
+    font-family: "PT-Sans";
+  }
+
+  .home-title-body {
+    font-size: 1.3em;
+  }
+
+  .float-right {
+    margin-left: 2vw;
+  }
+
+  .grid-top-right {
+    margin-right: 10vw;
   }
 }
