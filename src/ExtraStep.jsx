@@ -15,6 +15,7 @@ import ExpertScan from './components/pages/ExpertScan';
 import Login from './components/pages/Login';
 import Cart from './components/pages/Cart';
 import AOS from "aos";
+import Register from "./components/pages/Register";
 import "aos/dist/aos.css"
 
 function ExtraStep() {
