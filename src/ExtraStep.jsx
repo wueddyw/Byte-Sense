@@ -13,6 +13,7 @@ import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
 import Login from './components/pages/Login';
+import Register from "./components/pages/Register";
 import ManagedDetectionResponse from './components/ServicesPage/Managed-Detection-and-Response';
 import CustomBuiltApps from './components/ServicesPage/CustomBuiltApps';
 import CombinedAI from './components/ServicesPage/CombinedAI';
@@ -47,6 +48,7 @@ function ExtraStep() {
         <Route path='/Threat-Monitoring' component={ThreatMonitoring} />
         <Route path='/Cart' component={Cart} />
       </Switch>
+        <Route path="/Register" component={Register} />
     </Router>
   );
 }
