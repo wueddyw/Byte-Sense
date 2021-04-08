@@ -27,6 +27,7 @@
     grid-template-columns: 50% 50%;
     row-gap: 5vh;
     margin: 8vh 10vw 8vh 10vw;
+    grid-auto-flow: dense;
 }
 
 #service-content img {
@@ -42,6 +43,7 @@
     flex-direction: column;
     color: #00325c;
     padding-left: 2vw;
+    grid-column: 2;
 }
 
 .service-left {
@@ -51,6 +53,7 @@
     flex-direction: column;
     color: #00325c;
     padding-right: 2vw;
+    grid-column: 1;
 }
 
 #service-content h3 {
@@ -65,6 +68,7 @@
     align-content: center;
     flex-direction: column;
     margin-right: 3vw;
+    grid-column: 1;
 }
 
 .image-right {
@@ -73,4 +77,71 @@
     align-content: center;
     flex-direction: column;
     margin-left: 3vw;
+    grid-column: 2;
+}
+
+.service-body {
+    overflow-x: hidden;  
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        position: relative;
+    }
+    .service-body {
+        overflow-x: hidden;  
+    }
+    #service-content h3 {
+        text-align: center;
+        margin-bottom: 3vh;
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        position: relative;
+    }
+
+    #header-services {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .service-body {
+        overflow-x: hidden;  
+    }
+    #service-content h3 {
+        text-align: center;
+        margin-bottom: 3vh;
+        font-size: 150%;
+    }
+    #service-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-left {
+        margin: 0;
+    }
+    
+    .image-right {
+        margin-left: 0;
+    }
+
+    .service-left {
+        padding: 1vw;
+    }
+    .service-right {
+        padding: 1vw;
+    }
+
+    #header-services h3 {
+        color: white;
+        font-size: 4em;
+        margin-left: 0;
+        margin-top: 0;
+        text-shadow: 2px 2px black;
+    }
 }

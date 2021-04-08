@@ -52,7 +52,7 @@
 }
 
 #contact {
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 #contact p {
@@ -79,4 +79,50 @@
     border-radius: 5px;
     border: 1px solid rgb(204, 204, 204);
     padding: 0.5vh;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-body {
+        position: relative;
+        overflow-x: hidden;
+    }
+    .formDiv {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    #header h3 {
+        font-size: 3em;
+    }
+    #contact {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-body {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    #header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #header h3{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .formDiv {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #header h3 {
+        font-size: 3em;
+    }
+    #contact {
+        font-size: 100%;
+    }
 }

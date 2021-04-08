@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import "../../styles/cart.css";
+import Footer from '../Footer.js';
+import CartItem from '../CartItem.jsx';
 
 export default function Cart(props) {
     const [cart, setCart] = useState([]);
@@ -9,7 +11,6 @@ export default function Cart(props) {
     const fetchData = async () => {
         const res = await fetch("http://localhost:9000/cart");
         res.json().then((res) => {
-            console.log(res.data);
             setCart(res.data.items);
             setPayload(res.data);
         }).catch((error) => {
@@ -50,33 +51,31 @@ export default function Cart(props) {
         fetchData();
     }, []);
     return (
-        <div className="cart">
-            <h1>Shopping Cart</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {cart.map((item, i) => (
-                        <tr key={item.productId._id}>
-                            <td>{item.productId.name}</td>
-                            <td>{item.productId.price}</td>
-                            <td>
-                                <button onClick={(e) => deleteItemFromCart(item.productId._id)}>Remove</button>
-                            </td>
-                        </tr>
-                    ))}
-                    <tr>
-                        <td>Total: {payload.subTotal}</td>
-                        <td>
-                            <button onClick={(e) => emptyCart()}>Empty Cart</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div>
+            <div className="cart">
+                <h1>Shopping Cart</h1>
+                {cart.length > 0 ?
+                    <div>
+                        <button onClick={(e) => emptyCart()}>Empty Cart</button>
+                        <div className="cart-separator">
+                            <div id="item-container">
+                                {cart.map((item, i) => (
+                                    <CartItem name={item.productId.name}
+                                        price={item.productId.price}
+                                        remove={deleteItemFromCart}
+                                        id={item.productId._id} />
+                                ))}
+                            </div>
+                            <h3 id="total">Total: ${payload.subTotal}</h3>
+                        </div>
+                    </div>
+                    :
+                    <h3>Your cart is empty</h3>
+                }
+
+            </div>
+            <Footer />
         </div>
+
     );
 }

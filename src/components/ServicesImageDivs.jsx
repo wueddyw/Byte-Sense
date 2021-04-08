@@ -20,6 +20,9 @@ export default function Service() {
                 </p>
             </div>
 
+            <div className="image-right" data-aos="fade-left">
+                <img src={Threat}/>
+            </div>
             <div className="service-left" data-aos="fade-left">
                 <h3>Threat monitoring</h3>
                 <p>
@@ -28,9 +31,7 @@ export default function Service() {
                     can help you protect any vulnerabilities and malicious attacks.
                 </p>
             </div>
-            <div className="image-right" data-aos="fade-left">
-                <img src={Threat}/>
-            </div>
+            
             
             
             <div className="image-left" data-aos="fade-right">
@@ -46,6 +47,9 @@ export default function Service() {
                 </p>
             </div>
             
+            <div className="image-right" data-aos="fade-left">
+                <img src={CustomApp}/>
+            </div>
             <div className="service-left" data-aos="fade-left">
                 <h3>Custom-Built Applications</h3>
                 <p>
@@ -53,9 +57,7 @@ export default function Service() {
                     that requires certain degree of cyber protections.
                 </p>
             </div>
-            <div className="image-right" data-aos="fade-left">
-                <img src={CustomApp}/>
-            </div>
+            
             
         </div>
     );
