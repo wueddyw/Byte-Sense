@@ -23,7 +23,7 @@ import Footer from "../Footer";
 export default function Login() {
     return (
         <div className="wrapper">
-            <LoginDiv direction="fade-up" title="Login" fieldName1="email" fieldName2="Password" />
+            <LoginDiv direction="fade-up" title="Login" fieldName1="Email" fieldName2="Password" />
             <Footer />
         </div>
     );
