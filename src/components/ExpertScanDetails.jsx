@@ -38,7 +38,7 @@ export default function ExpertScanDetails() {
   return (
     <div className="expert">
       <h2>Expert Level Byte Scan 1.0 </h2>
-      <ul>
+      <ul className="productlist">
         <li>Scan your computer and server </li>
         <li>Scan malicious and vulnerabilities </li>
         <li>Export reports in PDF and CSV files formats</li>

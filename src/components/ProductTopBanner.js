@@ -9,7 +9,7 @@ export default function ProductTopBanner() {
     return (
       <>
   
-        <Showcase image={ShowcaseImage} text="Product"/>
+        <Showcase image={ShowcaseImage} title="Product"/>
         
         
       </>

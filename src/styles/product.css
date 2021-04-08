@@ -420,7 +420,7 @@ body {
 }
 
 .aboutProduct {
-  padding-bottom: 32px;
+  margin-bottom: 20vh;
   padding-top: 50px;
   padding-left: 20vw;
   background-image: url(../images/Product.png);
@@ -490,5 +490,9 @@ body {
   position: absolute;
   z-index: 1;
   text-shadow: 1.5px 1.5px #000000;
+}
+
+ul{
+  color: #0F4C81;
 }
 /*# sourceMappingURL=product.css.map */
