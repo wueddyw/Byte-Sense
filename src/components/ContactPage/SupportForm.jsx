@@ -6,7 +6,7 @@ export default function SupportForm() {
         <div>
             <form id="supportForm">
                 <div className="formDiv">
-                    <h3>Submit a Form</h3>
+                    <h3>Submit A Form</h3>
                 </div>
                 <div className="formDiv">
                     <p>Name</p>
