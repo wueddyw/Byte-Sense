@@ -30,10 +30,24 @@ export default function Home() {
 
 
       <div className="news">
-        <div className="news-header">
-          News
+        <div className="home-news-header">
+          <div className="what-we-do what-we-do-override" data-aos="fade-left">
+            <div className="text-right text_move-fix">
+              News
+            </div>
+          </div>
         </div>
 
+
+
+
+        {/* <div>
+      <div className="what-we-do" data-aos="fade-left">
+        <div className="text-right">
+            meow
+        </div>
+      </div>
+    </div> */}
 
 
 

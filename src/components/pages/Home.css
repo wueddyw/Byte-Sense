@@ -1,22 +1,23 @@
 .news {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Raleway";
 }
 
-.news-header {
+.home-news-header {
   text-align: center;
-  height: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: 100%;
   background-color: #142955;
   font-size: 3em;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: white;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
+  text-shadow: 2px 2px black;
 }
 
 .news-body {
   text-align: center;
-  background-color: white;
+  background-color: #f0f0f0;
   padding-top: 100px;
 }
 
@@ -29,18 +30,46 @@
 }
 
 @media only screen and (max-width: 1500px) {
-  .news-header {
+  .news.home-news-header {
     text-align: center;
-    height: 100px;
     width: 100%;
     font-size: 3em;
     font-weight: bold;
     color: white;
     font-family: "PT Sans", sans-serif;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .news-page-image-div {
     display: none;
   }
+
+  .home-news-header {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 10vw;
+  }
+}
+
+.what-we-do.what-we-do-override {
+  /* background-color: red; */
+  margin: 0px;
+
+  /* display: unset;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -webkit-box-pack: unset;
+  -ms-flex-pack: unset;
+  justify-content: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+  flex: unset; */
+}
+
+.text-right.text_move-fix {
+  padding: 0px;
 }
