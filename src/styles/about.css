@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Oxygen:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
 body {
   margin: 0 0 0 0;
+  background-color: #f0f0f0;
 }
 
 #root {
@@ -12,7 +17,6 @@ body {
           flex-direction: column;
   scroll-behavior: smooth;
   margin: 0 0 0 0;
-  font-family: "PT Sans", sans-serif;
 }
 
 .showcase {
@@ -38,19 +42,29 @@ body {
 
 .showcase h3 {
   font-size: 55px;
-  font-family: "PT Sans", sans-serif;
-  text-shadow: 1.5px 1.5px #000000;
+  font-family: "Segoe UI", sans-serif;
+  text-shadow: 2px 2px #000000;
 }
 
 .showcase-text {
-  margin-top: 20vh;
-  margin-left: 7vw;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 .showcase-text h3 {
-  font-size: 55px;
+  font-size: 6em;
   font-weight: normal;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .showcase-text {
+    margin-left: 10vw;
+    margin-top: 15vw;
+  }
+  h3 {
+    font-size: 14vw;
+  }
 }
 
 .our-story {
@@ -72,8 +86,8 @@ body {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 8vh;
-  border-bottom: 1px solid rgba(125, 125, 125, 0.2);
-}
+  border-bottom: 1px solid rgba(110, 110, 110, 0.2);
+
 
 .our-story p {
   font-size: 16px;
@@ -108,7 +122,7 @@ body {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 8vh;
-  border-top: 1px solid rgba(125, 125, 125, 0.2);
+  border-top: 1px solid rgba(110, 110, 110, 0.2);
 }
 
 .our-story-alt p {
@@ -420,6 +434,22 @@ body {
   color: white;
 }
 
+.login-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .login-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,15 +464,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30vh 30vw 5vh 30vw;
-  padding: 25px 25px 25px 25px;
+  margin: 25vh 0vw 15vh 0vw;
+  padding: 35px 25px 35px 25px;
   border: 1px solid rgba(230, 230, 230, 0.4);
   -webkit-box-shadow: 0px 10px 10px #888888;
           box-shadow: 0px 10px 10px #888888;
+  background-color: white;
+  width: 40%;
 }
 
 .login-container h3 {
   font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .login {
@@ -457,7 +490,7 @@ body {
 
 .login button {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -469,41 +502,65 @@ body {
   background-color: #0f4c81;
 }
 
-.field-name {
+.login p {
   margin-top: 8px;
+}
+
+.field-name {
+  margin-top: 12px;
   margin-bottom: 8px;
 }
 
 .field {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .field input[type=text] {
   width: 100%;
   margin: 0 0 0 0;
-  border: 1px solid #CCC;
+  border: 1px solid #cccccc;
   border-radius: 4px;
-  padding: 12px 20px;
+  padding: 5px 10px;
 }
 
 .field #email {
   margin: 0 0 0 0;
-  padding: 14px 20px;
+  padding: 14px 10px;
   width: 100%;
 }
 
 .field input[type=password] {
   width: 100%;
   margin: 0 0 0 0;
-  border: 1px solid #CCC;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   padding: 12px 20px;
 }
 
 .field #password {
   margin: 0 0 0 0;
-  padding: 6px 20px;
+  padding: 7px 10px;
   width: 100%;
+}
+
+.route-link Link {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .login-container {
+    width: 60%;
+  }
+  .login button {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login-container {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=about.css.map */

@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
 body {
   margin: 0 0 0 0;
+  background-color: #f0f0f0;
 }
 
 #root {
@@ -12,7 +14,6 @@ body {
           flex-direction: column;
   scroll-behavior: smooth;
   margin: 0 0 0 0;
-  font-family: "PT Sans", sans-serif;
 }
 
 .our-story {
@@ -34,7 +35,7 @@ body {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 8vh;
-  border-bottom: 1px solid rgba(125, 125, 125, 0.2);
+  border-bottom: 1px solid rgba(110, 110, 110, 0.2);
 }
 
 .our-story p {
@@ -70,7 +71,7 @@ body {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 8vh;
-  border-top: 1px solid rgba(125, 125, 125, 0.2);
+  border-top: 1px solid rgba(110, 110, 110, 0.2);
 }
 
 .our-story-alt p {

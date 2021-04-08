@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { getFromStorage, getInStorage } from "../utils/storage"
+import { Link } from "react-router-dom";
+import { getFromStorage, getInStorage } from "../utils/storage";
 
 class LoginDiv extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class LoginDiv extends Component {
       token: "",
       signInError: "",
       signInEmail: "",
-      signInPassword: "",
+      signInPassword: ""
     };
 
     this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this);
@@ -76,12 +77,19 @@ class LoginDiv extends Component {
 		}).then(res => res.json())
 			.then(json => {
 				this.setState({
-					signUpError: json.message
+					signInError: json.message
 				});
 			});
 	}
 
   // function LoginDiv(props) {
+
+  // goToRegister = () =>
+  // {
+  //   let path = "./pages/register";
+  //   let history = useHistory();
+  //   history.push(path);
+  // }
 
   render() {
 
@@ -93,59 +101,59 @@ class LoginDiv extends Component {
 		} = this.state;
 
     return (
-      <div className="login-container" data-aos={this.props.direction}>
-        <div>
-          <h3>{this.props.title}</h3>
-        </div>
+      <div className="login-wrapper">
+        <div className="login-container" data-aos={this.props.direction}>
+          <div>
+            <h3>{this.props.title}</h3>
+          </div>
 
-        <div className="login">
-          <form>
-            <div className="field-name">
-              <label for="email">{this.props.fieldName1}</label>
-            </div>
+          <div className="login">
+            <form>
+              <div className="field-name">
+                <label for="email">{this.props.fieldName1}</label>
+             </div>
 
-            <div className="field">
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder={this.props.fieldName1 + "..."}
-                value={signInEmail}
-                onChange={this.onTextboxChangeSignInEmail}
-              />
-            </div>
-
-            <div className="field-name">
-              <div>
-                <label for="password">{this.props.fieldName2}</label>
+              <div className="field">
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value={signInEmail}
+                  onChange={this.onTextboxChangeSignInEmail}
+                />
               </div>
-            </div>
 
-            <div className="field">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder={this.props.fieldName2 + "..."}
-                value={signInPassword}
-                onChange={this.onTextboxChangeSignInPassword}
-              />
-            </div>
+              <div className="field-name">
+                <div>
+                  <label for="password">{this.props.fieldName2}</label>
+                </div>
+              </div>
 
-            <div>
-              <button type="button" onClick={this.onSignIn}>Sign in</button>
-            </div>
+              <div className="field">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={signInPassword}
+                  onChange={this.onTextboxChangeSignInPassword}
+                />
+              </div>
 
-            <div>
-              <a href="/">Forgot password?</a>
-            </div>
+              <div>
+                <button type="button" onClick={this.onSignIn}>Sign in</button>
+              </div>
 
-            <div>
-              <p>
-                New user? <a href="/">Create an account</a>
-              </p>
-            </div>
-          </form>
+              <div>
+                <a href="/">Forgot password?</a>
+              </div>
+
+              <div className="route-link">
+                <Link to="./Register">
+                  New user? Create an account
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

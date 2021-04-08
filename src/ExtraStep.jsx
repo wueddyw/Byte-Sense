@@ -39,6 +39,7 @@ function ExtraStep() {
         <Route path='/Login' component={Login} />
         <Route path='/Cart' component={Cart} />
       </Switch>
+        <Route path="/Register" component={Register} />
     </Router>
   );
 }

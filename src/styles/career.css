@@ -1,5 +1,6 @@
 body {
   margin: 0 0 0 0;
+  background-color: #f0f0f0;
 }
 
 #root {
@@ -12,7 +13,6 @@ body {
           flex-direction: column;
   scroll-behavior: smooth;
   margin: 0 0 0 0;
-  font-family: "PT Sans", sans-serif;
 }
 
 .footer-container {
