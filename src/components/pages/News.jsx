@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import './News.css';
 
 import newsImage1 from './News Components/Images/news1.jpg';
-import newsHeaderImage from './News Components/Images/news_header.png';
+import newsHeaderImage from './News Components/Images/news_header.jpg';
 import { NewsContextProvider } from '../NewsContext';
 import { GetNews } from '../GetNews';
 
