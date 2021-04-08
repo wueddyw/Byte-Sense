@@ -36,12 +36,19 @@
     box-shadow: 0px 10px 10px #888888;
 }
 
+#service-content h3{
+    color: #7E7D80;
+}
+
+#service-content p {
+    color: #00325c;
+}
+
 .service-right {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    color: #00325c;
     padding-left: 2vw;
     grid-column: 2;
 }
@@ -51,7 +58,6 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    color: #00325c;
     padding-right: 2vw;
     grid-column: 1;
 }
