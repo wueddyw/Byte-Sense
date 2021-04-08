@@ -21,7 +21,7 @@ export default function SupportForm() {
                     <textarea className="message" form="supportForm"></textarea>
                 </div>
                 <div className="formDiv" id="buttonDiv">
-                    <input type="submit" id="submitBtn"/>
+                    <button type="submit" form="supportForm" id="submitBtn">Submit</button>
                 </div>
             </form>
         </div>
