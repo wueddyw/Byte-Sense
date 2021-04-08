@@ -3,12 +3,27 @@ import '../../styles/contact.css';
 
 export default function SupportForm() {
     return (
-        <form id="supportForm">
-            <h3>Submit a Form</h3>
-            <input type="text" placeholder="Email" id="email" />
-            <input type="text" placeholder="Your Name" id="name" />
-            <textarea placeholder="Message" id="mess" form="supportForm"></textarea>
-            <input type="submit" id="submitBtn" />
-        </form>
+        <div>
+            <form id="supportForm">
+                <div className="formDiv">
+                    <h3>Submit a Form</h3>
+                </div>
+                <div className="formDiv">
+                    <p>Name</p>
+                    <input type="text" className="formInput" />
+                </div>
+                <div className="formDiv"> 
+                    <p>Email</p>
+                    <input type="text" className="formInput"/>
+                </div>
+                <div className="formDiv">
+                    <p>Message</p>
+                    <textarea className="message" form="supportForm"></textarea>
+                </div>
+                <div className="formDiv" id="buttonDiv">
+                    <button type="submit" form="supportForm" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
     );
 }
