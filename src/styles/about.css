@@ -47,20 +47,29 @@ body {
 }
 
 .showcase-text {
-  margin-top: 100px;
-  margin-left: 100px;
+  margin-top: 8vw;
+  margin-left: 7vw;
+}
+
+.showcase-text p {
+  margin-top: 25px;
+  font-size: 1.5vw;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 .showcase-text h3 {
-  font-size: 6em;
+  font-size: 4.5em;
   font-weight: normal;
   color: white;
 }
 
 @media screen and (max-width: 768px) {
-  .showcase-text {
-    margin-left: 10vw;
-    margin-top: 15vw;
+  .showcase-text p {
+    font-size: 2.8vw;
+  }
+  .showcase-text h3 {
+    font-size: 5.4vw;
   }
   h3 {
     font-size: 14vw;
@@ -99,7 +108,7 @@ body {
 
 .our-story h3 {
   font-size: 44px;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -135,7 +144,7 @@ body {
 
 .our-story-alt h3 {
   font-size: 44px;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -156,7 +165,7 @@ body {
 
 .four-div-container h3 {
   margin-top: 5vh;
-  color: #0f4c81;
+  color: #7e7d80;
   font-size: 32px;
   text-align: center;
 }
@@ -304,7 +313,7 @@ body {
 .text-right h3 {
   font-size: 32px;
   text-align: center;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -324,7 +333,7 @@ body {
 .text-left h3 {
   font-size: 32px;
   text-align: center;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 

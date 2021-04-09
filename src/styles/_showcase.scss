@@ -41,14 +41,22 @@
 
 .showcase-text
 {
-    // margin-top: 20vh;
-    // margin-left: 7vw;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 8vw;
+    margin-left: 7vw;
+    // margin-top: 100px;
+    // margin-left: 100px;
+
+    p
+    {
+        margin-top: 25px;
+        font-size: 1.5vw;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
 
     h3
     {
-        font-size: 6em;
+        font-size: 4.5em;
         font-weight: normal;
         color: white;
         // color: rgb(15, 76, 129);
@@ -60,8 +68,18 @@
 {
     .showcase-text
     {
-        margin-left: 10vw;
-        margin-top: 15vw;
+        // margin-left: 10vw;
+        // margin-top: 15vw;
+
+        p
+        {
+            font-size: 2.8vw;
+        }
+
+        h3
+        {
+            font-size: 5.4vw;
+        }
     }
     
     h3

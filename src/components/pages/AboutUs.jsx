@@ -17,7 +17,7 @@ export default function ContactUs() {
 
   return (
     <div className="wrapper">
-      <Showcase image={ShowcaseImage} title="About Byte Sense" text=""/>
+      <Showcase image={ShowcaseImage} title="About Us" text=""/>
       <TextDiv title="Our Story" direction="fade-up" content="Byte Sense was formed with one mission in mind - to provide the world
           with a safer place in the cyberspace. We provide customers with our
           new Cybersecurity Antivirus protection which is more diverse. The
