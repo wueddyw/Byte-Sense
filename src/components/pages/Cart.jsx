@@ -56,7 +56,6 @@ export default function Cart(props) {
                 <h1>Shopping Cart</h1>
                 {cart.length > 0 ?
                     <div>
-                        <button onClick={(e) => emptyCart()}>Empty Cart</button>
                         <div className="cart-separator">
                             <div id="item-container">
                                 {cart.map((item, i) => (
@@ -66,7 +65,11 @@ export default function Cart(props) {
                                         id={item.productId._id} />
                                 ))}
                             </div>
-                            <h3 id="total">Total: ${payload.subTotal}</h3>
+                            <div className="total">
+                                <h2>Summary</h2>
+                                <h3>Total: ${payload.subTotal}.00</h3>
+                                <button>Checkout</button>
+                            </div>
                         </div>
                     </div>
                     :
