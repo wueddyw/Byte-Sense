@@ -17,7 +17,7 @@ import userImage from "../../images/user.png";
 export default function Products() {
   return (
     <div className="wrapper">
-      <Showcase image={image} title="Careers" text="Build a career at the cutting edge of cyber security"/>
+      <Showcase image={image} title="Career" text="Build a career at the cutting edge of cyber security"/>
       <TextDiv title="Building a safe and secure future" direction="fade-up"
         content="Byte Sense was formed with one mission in mind - to provide the world
         with a safer place in the cyberspace. We provide customers with our

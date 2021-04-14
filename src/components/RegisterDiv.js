@@ -110,7 +110,7 @@ class RegisterDiv extends Component {
 
     return (
       <div className="register-wrapper">
-        <div className="register-container">
+        <div className="register-container" data-aos={this.props.direction}>
 					<div>
 						<h3>{this.props.title}</h3>
 					</div>

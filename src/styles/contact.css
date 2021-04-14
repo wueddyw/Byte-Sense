@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext");
+
 #contact-body {
     background-color: rgb(240, 240, 240);
 }
@@ -32,26 +34,6 @@
     padding: 0.5vw;
 }
 
-#header {
-    position: relative;
-    display: flex;
-    background-image: url("../images/contact_back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 100%;
-    margin-top: 80px;
-}
-
-#header h3 {
-    color: white;
-    font-size: 6em;
-    margin-left: 100px;
-    margin-top: 100px;
-    text-shadow: 2px 2px black;
-}
-
 #contact {
     font-size: 2vw;
 }
@@ -70,6 +52,7 @@
 
 .formDiv h3 {
     text-align: center;
+    color: #00325c;
 }
 
 #buttonDiv {
@@ -98,10 +81,6 @@
         margin-right: 15vw;
     }
 
-    #header h3 {
-        font-size: 3em;
-    }
-
     #contact {
         font-size: 100%;
     }
@@ -113,23 +92,9 @@
         overflow-x: hidden;
     }
 
-    #header {
-        justify-content: center;
-        align-items: center;
-    }
-
-    #header h3 {
-        margin-left: 0;
-        margin-top: 0;
-    }
-
     .formDiv {
         margin-left: 0px;
         margin-right: 0px;
-    }
-
-    #header h3 {
-        font-size: 3em;
     }
 
     #contact {

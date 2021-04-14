@@ -48,7 +48,7 @@ body {
 
 .our-story h3 {
   font-size: 44px;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -84,7 +84,7 @@ body {
 
 .our-story-alt h3 {
   font-size: 44px;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -105,7 +105,7 @@ body {
 
 .four-div-container h3 {
   margin-top: 5vh;
-  color: #0f4c81;
+  color: #7e7d80;
   font-size: 32px;
   text-align: center;
 }
@@ -253,7 +253,7 @@ body {
 .text-right h3 {
   font-size: 32px;
   text-align: center;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -273,7 +273,7 @@ body {
 .text-left h3 {
   font-size: 32px;
   text-align: center;
-  color: #00325c;
+  color: #7e7d80;
   margin-bottom: 3vh;
 }
 
@@ -420,7 +420,7 @@ body {
 }
 
 .aboutProduct {
-  margin-bottom: 20vh;
+  padding-bottom: 32px;
   padding-top: 50px;
   padding-left: 20vw;
   background-image: url(../images/Product.png);
@@ -453,16 +453,13 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 45vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* margin-bottom: 1000px; */
   padding-top: 100px;
-  margin-top: 80px;
-  margin-bottom: 50px;
-  color: white;
-  font-size: 6em;
-  text-shadow: 2px 2px black;
+  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -490,9 +487,5 @@ body {
   position: absolute;
   z-index: 1;
   text-shadow: 1.5px 1.5px #000000;
-}
-
-ul{
-  color: #0F4C81;
 }
 /*# sourceMappingURL=product.css.map */
