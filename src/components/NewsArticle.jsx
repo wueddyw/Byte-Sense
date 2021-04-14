@@ -54,7 +54,27 @@ function NewsArticle({data,articleCount}){
     return(
         <>
 
+<div className= {"news-article-container " + (articleCount%2==0?"":"news-article-container-hflip")}>
+    <div className= "news-article-container-item">
+        <div className="news-page-item-header">
+            {data.title}
+        </div>
+        <div className="news-page-item-body">
+            {data.description}
+        </div>
+    </div>
+    <div className= "news-article-container-item">
+    <div className="news-page-item-image-div">
+        <img className="news-page-item-image" src={data.image.url ? data.image.url : newsNoLoadImage} alt="news image not loaded"/>
+        </div>
+    </div>
+</div>
 
+
+
+
+
+{/* 
         <div className={containsInappropriateContent(data.title,data.description)?"news-page-cannot-show":""}>
 
         
@@ -103,7 +123,7 @@ function NewsArticle({data,articleCount}){
             </div>
         </div>
 
-
+ */}
 
 
 
