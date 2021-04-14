@@ -7,6 +7,8 @@ import HomeAboutUsBar from '../HomeAboutUsBar';
 import HomeImageLinks from '../HomeImageLinks';
 import HomeProducts from '../HomeProducts';
 import Footer from "../Footer";
+import PaypalButton from '../PayPalButton';
+import ContactMe from '../Emailer';
 
 import { NewsContextProviderHome } from '../NewsContext';
 import { GetNews } from '../GetNews';
@@ -21,19 +23,33 @@ export default function Home() {
 
 
       <HomeTopBanner barHeight={"700px"}></HomeTopBanner>
-
-      {/* <FloatingBackground/> */}
+      {/* <FloatingBackground/> */} 
       {/* <HomeAboutUsBar barHeight={"700px"}></HomeAboutUsBar> */}
-
+      {/* <ContactMe/> */}
+      {/* <PaypalButton amount="60.00" afterPurchaseGoTo="SomeLocation"/> */}
       <HomeProducts/>
       <HomeImageLinks/>
 
 
       <div className="news">
-        <div className="news-header">
-          News
+        <div className="home-news-header">
+          <div className="what-we-do what-we-do-override" data-aos="fade-left">
+            <div className="text-right text_move-fix">
+              News
+            </div>
+          </div>
         </div>
 
+
+
+
+        {/* <div>
+      <div className="what-we-do" data-aos="fade-left">
+        <div className="text-right">
+            meow
+        </div>
+      </div>
+    </div> */}
 
 
 

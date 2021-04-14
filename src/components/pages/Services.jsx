@@ -1,20 +1,16 @@
 import React from 'react';
 import '../../App.css';
 import '../../styles/services.css'
-import Service from '../ServicesPage/services.jsx';
-import ServiceBlocks from '../ServicesPage/ServiceBlocks';
-import ClickableServices from '../ServicesPage/ClickableServices';
+import Service from '../ServicesImageDivs';
 import Footer from '../Footer.js';
+import Banner from "../../images/services_back.jpg"
+import Showcase from "../Showcase";
 
 export default function Services() {
   return (
-    <div>
-      <header id="header-services">
-        <h3>Services</h3>
-      </header>
+    <div className="service-body">
+      <Showcase image={Banner} title="Services" text=""/>
       <Service/>
-      <ServiceBlocks/>
-      <ClickableServices/>
       <Footer/>
     </div>
   );

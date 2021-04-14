@@ -15,7 +15,7 @@ export function GetNews(props){
         <>
 
             <div>
-                {data ? data.articles.map((news,index)=>  <NewsArticle data={news} articleCount={index} key={news.url}/>) : "Loading"}
+                {data ? data.value.map((news,index)=>  <NewsArticle data={news} articleCount={index} /*key={news.url}*//>) : "Loading"}
             </div>
 
         </>

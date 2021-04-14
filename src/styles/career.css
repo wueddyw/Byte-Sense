@@ -1,5 +1,6 @@
 body {
   margin: 0 0 0 0;
+  background-color: #f0f0f0;
 }
 
 #root {
@@ -12,12 +13,11 @@ body {
           flex-direction: column;
   scroll-behavior: smooth;
   margin: 0 0 0 0;
-  font-family: "PT Sans", sans-serif;
 }
 
 .footer-container {
   margin: 0 0 0 0;
-  background-color: #1b1b1b;
+  background-color: #00325c;
   padding: 0 6vw 0 6vw;
 }
 
@@ -31,8 +31,9 @@ body {
   margin-top: 10vh;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #1b1b1b;
+  background-color: #00325c;
   color: white;
+  margin-top: 0;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -65,9 +66,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1b1b1b;
+  background-color: #00325c;
   padding: 20px 0 20px 0;
-  border-top: 1px solid rgba(126, 125, 128, 0.2);
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
   color: white;
   font-size: 12px;
 }
@@ -120,6 +121,23 @@ body {
 .trip-image img {
   width: 25vw;
   height: 18.33vw;
+}
+
+@media screen and (max-width: 768px) {
+  .trip-image-spread {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .trip-image {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .trip-image img {
+    width: 80vw;
+    height: 58.656vw;
+  }
 }
 
 .value-wrapper {
@@ -198,6 +216,21 @@ body {
           align-items: center;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-bottom: 8vh;
   row-gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=career.css.map */

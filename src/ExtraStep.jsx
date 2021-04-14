@@ -13,12 +13,9 @@ import Contact from './components/pages/Contact';
 import StandardScan from './components/pages/StandardScan';
 import ExpertScan from './components/pages/ExpertScan';
 import Login from './components/pages/Login';
-import ManagedDetectionResponse from './components/ServicesPage/Managed-Detection-and-Response';
-import CustomBuiltApps from './components/ServicesPage/CustomBuiltApps';
-import CombinedAI from './components/ServicesPage/CombinedAI';
-import ThreatMonitoring from './components/ServicesPage/ThreatMonitoring';
 import Cart from './components/pages/Cart';
 import AOS from "aos";
+import Register from "./components/pages/Register";
 import "aos/dist/aos.css"
 
 function ExtraStep() {
@@ -41,12 +38,9 @@ function ExtraStep() {
         <Route path = '/StandardScan' component={StandardScan}/>
         <Route path = '/ExpertScan' component={ExpertScan}/>
         <Route path='/Login' component={Login} />
-        <Route path='/Managed-Detection-and-Response' component={ManagedDetectionResponse}/>
-        <Route path='/Custom-Built-Applications' component={CustomBuiltApps}/>
-        <Route path='/Combined-AI-and-Expert-Threat-Intelligence' component={CombinedAI} />
-        <Route path='/Threat-Monitoring' component={ThreatMonitoring} />
         <Route path='/Cart' component={Cart} />
       </Switch>
+        <Route path="/Register" component={Register} />
     </Router>
   );
 }

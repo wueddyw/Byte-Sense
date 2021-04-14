@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext");
+
 .home-top-banner {
   /* background-image: url("../images/img-1.jpg");
   background-position: center;
@@ -17,10 +19,13 @@
   color: #fff;
   font-size: 4.5em;
   justify-content: left;
-  margin-top: 40px;
+  margin-top: 4vw;
   margin-left: 7vw;
   position: absolute;
   z-index: 1;
+  text-shadow: 2px 2px black;
+
+  font-family: "Segoe UI", sans-serif;
 }
 
 .home-top-banner-sub-slogan {
@@ -31,6 +36,24 @@
   padding-left: 7vw;
   position: absolute;
   z-index: 1;
+  font-family: "Segoe UI", sans-serif;
+
+  text-shadow: 2px 2px black;
+}
+
+.home-video-banner {
+  padding-top: 80px;
+}
+
+.home-video-video {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+
+.flex-center {
+  color: #00325c;
+  font-family: "Raleway";
 }
 
 .home-video-banner {
@@ -52,12 +75,12 @@
   }
 
   .home-top-banner-slogan {
-    font-size: 4.5vw;
+    font-size: 5.4vw;
   }
 
   .home-top-banner-sub-slogan {
-    font-size: 1.5vw;
-    padding-top: 18vw;
-    padding-left: 7vw;
+    font-size: 2.8vw;
+    padding-top: 22vw;
+    padding-left: 10vw;
   }
 }
