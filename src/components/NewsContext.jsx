@@ -5,16 +5,18 @@ import axios from 'axios'
 export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
-    const apiKey = "a41f2ffe759a467783cdb7fee9522a6a";
+    const apiKey = "cef784c444msh3f05f0795666500p1ebc34jsnae2d4bce78e5";
 
     const [data,setData] = useState();
 //language=en&category=technology&
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
     useEffect(()=>{
-        axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6`
-        , {headers: {'X-Api-Key': `${apiKey}`}})
-        .then(response=> setData(response.data))
+        axios.get(`https://rapidapi.p.rapidapi.com/api/search/NewsSearchAPI?q=cyber%20security&pageNumber=1&pageSize=10&autoCorrect=true&safeSearch=true&withThumbnails=true`
+        , {headers: {'x-rapidapi-key': `${apiKey}`,
+        "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+        "useQueryString": "true"}})
+        .then(response=> {setData(response.data)})
         .catch(error=>console.log(error));
     }, []);
 
@@ -30,16 +32,18 @@ export const NewsContextProvider = (props) => {
 
 
 export const NewsContextProviderHome = (props) => {
-    const apiKey = "a41f2ffe759a467783cdb7fee9522a6a";
+    const apiKey = "cef784c444msh3f05f0795666500p1ebc34jsnae2d4bce78e5";
 
     const [data,setData] = useState();
 //language=en&category=technology&
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
 //axios.get(`http://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=6&apiKey=${apiKey}`)
     useEffect(()=>{
-        axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=technology&q=security&pageSize=1`
-        , {headers: {'X-Api-Key': `${apiKey}`}})
-        .then(response=> setData(response.data))
+        axios.get(`https://rapidapi.p.rapidapi.com/api/search/NewsSearchAPI?q=cyber%20security&pageNumber=1&pageSize=1&autoCorrect=true&safeSearch=true&withThumbnails=true`
+        , {headers: {'x-rapidapi-key': `${apiKey}`,
+        "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+        "useQueryString": "true"}})
+        .then(response=> {setData(response.data)})
         .catch(error=>console.log(error));
     }, []);
 
