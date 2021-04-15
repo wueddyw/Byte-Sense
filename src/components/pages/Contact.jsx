@@ -6,19 +6,22 @@ import SupportForm from "../ContactPage/SupportForm";
 import Footer from "../Footer.js";
 import Banner from "../../images/contact_back.jpg";
 import Showcase from "../Showcase";
+import Emailer from "../Emailer";
 
 export default function SignUp() {
-  return (
-    <>
-      <Navbar />
-      <div className="contact-body">
-        <Showcase image={Banner} title="Contact Us" text="" />
-        <div id="content">
-          <ContactInfo />
-          <SupportForm />
+    return (
+      <>
+        <Navbar />
+        <div className="contact-body">
+           <Showcase image={Banner} title="Contact Us" text=""/>
+           <div id="content">
+              <ContactInfo/>
+              {/* <SupportForm/> */}
+              <Emailer/>
+
+          </div>
+          <Footer/>
         </div>
-        <Footer />
-      </div>
-    </>
-  );
+      </>
+    );
 }

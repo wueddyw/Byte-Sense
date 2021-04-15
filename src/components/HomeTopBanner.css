@@ -56,6 +56,15 @@
   font-family: "Raleway";
 }
 
+.home-video-banner {
+  padding-top: 80px;
+}
+
+.home-video-video {
+  padding: 0px;
+  margin: 0px;
+}
+
 @media only screen and (max-width: 1500px) {
   .home-top-banner {
     height: 120vw;

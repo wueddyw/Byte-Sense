@@ -24,13 +24,9 @@ export default function Home() {
       <Navbar />
 
       <HomeTopBanner barHeight={"700px"}></HomeTopBanner>
-      {/* <FloatingBackground/> */} 
-      {/* <HomeAboutUsBar barHeight={"700px"}></HomeAboutUsBar> */}
-      {/* <ContactMe/> */}
-      {/* <PaypalButton amount="60.00" afterPurchaseGoTo="SomeLocation"/> */}
+
       <HomeProducts/>
       <HomeImageLinks/>
-
 
       <div className="news">
         <div className="home-news-header">
@@ -41,85 +37,20 @@ export default function Home() {
           </div>
         </div>
 
-
-
-
-        {/* <div>
-      <div className="what-we-do" data-aos="fade-left">
-        <div className="text-right">
-            meow
-        </div>
-      </div>
-    </div> */}
-
-
-
         <div className="news-body">
 
         <NewsContextProviderHome>
         <GetNews/>
-      </NewsContextProviderHome>
+        </NewsContextProviderHome>
 
-
-{/* 
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
         </div>
 
-
-
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div>
-
-        
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div>
-
-        
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div>
-         */}
 
 
       </div>
 
-      {/* <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div>
-
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div>
-
-        <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div> */}
-
-      </div>
-
-
-
+        <div className="home-page-bottom-break"></div>
       <Footer/>
-
-
-
 
     </>
   );

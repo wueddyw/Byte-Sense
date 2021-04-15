@@ -1,5 +1,7 @@
 .news {
   font-family: "Raleway";
+
+  overflow-x: hidden;
 }
 
 .home-news-header {
@@ -9,7 +11,6 @@
   width: 100%;
   background-color: #142955;
   font-size: 3em;
-  /* font-weight: bold; */
   color: white;
   font-family: "PT Sans";
   text-shadow: 2px 2px black;
@@ -27,6 +28,10 @@
   margin: 0 auto;
   padding: 10px;
   position: relative;
+}
+
+.home-page-bottom-break {
+  height: 100px;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -50,26 +55,17 @@
     padding-bottom: 2vw;
     font-size: 10vw;
   }
+
+  .home-page-bottom-break {
+    height: 5vw;
+  }
 }
 
 .what-we-do.what-we-do-override {
-  /* background-color: red; */
   margin: 0px;
-
-  /* display: unset;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
-  -webkit-box-pack: unset;
-  -ms-flex-pack: unset;
-  justify-content: unset;
-  -webkit-box-align: unset;
-  -ms-flex-align: unset;
-  align-items: unset;
-  flex: unset; */
 }
 
 .text-right.text_move-fix {
   padding: 0px;
+  /* overflow-x: hidden; */
 }
