@@ -8,9 +8,9 @@ import backgroundImage from '../images/backGroundBlur1.jpg';
 
 function HomeProducts(props) {
 
-    const backGroundImageStyle={
-     backgroundImage: "url(" + backgroundImage + ")"
-  };
+//     const backGroundImageStyle={
+//      backgroundImage: "url(" + backgroundImage + ")"
+//   };
 
 
     return  (
@@ -27,7 +27,7 @@ function HomeProducts(props) {
       </div>
       <div className="grid-holder-outside" >
         <div className="grid-holder-inside">
-            <div className="grid-control" style ={backGroundImageStyle}>
+            <div className="grid-control" /*style ={backGroundImageStyle}*/>
                 <div className="grid-top-left">
 
                     <div className="hcenter">

@@ -29,9 +29,9 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 0px;
-  background-color: #aaaaaa;
+  /* background-color: #aaaaaa; */
   width: 1400px;
-  font-size: 2.3em;
+  font-size: 22px;
   line-height: 2.4em;
 }
 
@@ -92,12 +92,12 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  height: 650px;
+  height: 550px;
 }
 
 .product-top-left {
-  max-height: 600px;
-  max-width: 600px;
+  max-height: 500px;
+  max-width: 500px;
 }
 
 .hcenter {
