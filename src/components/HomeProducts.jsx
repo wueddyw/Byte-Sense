@@ -4,11 +4,15 @@ import './HomeProducts.css';
 import productStandard from '../images/Product.png';
 import productExpert from '../images/Product.png';
 
-
+import backgroundImage from '../images/backGroundBlur1.jpg';
 
 function HomeProducts(props) {
 
-  
+    const backGroundImageStyle={
+     backgroundImage: "url(" + backgroundImage + ")"
+  };
+
+
     return  (
 
 
@@ -21,9 +25,9 @@ function HomeProducts(props) {
             </div>
         </div>
       </div>
-      <div className="grid-holder-outside">
+      <div className="grid-holder-outside" >
         <div className="grid-holder-inside">
-            <div className="grid-control">
+            <div className="grid-control" style ={backGroundImageStyle}>
                 <div className="grid-top-left">
 
                     <div className="hcenter">
@@ -42,9 +46,9 @@ function HomeProducts(props) {
                         <div className="text-right text_move-fix">
                             <ul  className="flex-center">
                                 <li><div className="title-header"><b><u>Standard Byte Scan 1.0</u></b></div></li>
-                                <li className="home-title-body">Scan your computer and server</li>
-                                <li className="home-title-body">Scan malicious and vulnerabilities</li>
-                                <li className="home-title-body">Export reports in PDF / CSV format</li>
+                                <li className="home-title-body">-Scan your computer and server</li>
+                                <li className="home-title-body">-Scan malicious and vulnerabilities</li>
+                                <li className="home-title-body">-Export reports in PDF / CSV format</li>
                             </ul>
                         </div>
                     </div>

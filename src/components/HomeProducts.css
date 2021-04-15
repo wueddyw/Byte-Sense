@@ -9,11 +9,14 @@
   padding-bottom: 50px;
   text-shadow: 2px 2px black;
   font-family: "PT-Sans";
+
+  overflow-x: hidden;
 }
 
 .grid-holder-outside {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   text-align: center;
+  overflow-x: hidden;
 }
 
 .grid-holder-inside {

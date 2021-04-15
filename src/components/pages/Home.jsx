@@ -27,6 +27,7 @@ export default function Home() {
       {/* <HomeAboutUsBar barHeight={"700px"}></HomeAboutUsBar> */}
       {/* <ContactMe/> */}
       {/* <PaypalButton amount="60.00" afterPurchaseGoTo="SomeLocation"/> */}
+      
       <HomeProducts/>
       <HomeImageLinks/>
 
