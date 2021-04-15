@@ -34,6 +34,8 @@ body {
 .item-desc {
     padding: 1vw;
     flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 2vw;
 }
 
 .total {
@@ -92,4 +94,70 @@ button {
 
 .item-price {
     font-size: 120%;
+}
+
+#price-mobile {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .cart h3{
+        font-size: 100%;
+    }
+
+    .item-price {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cart-separator {
+        display: block;
+    }
+
+    .cart-item {
+        display: flex;
+    }
+
+    .item-total {
+        display: block;
+        text-align: center;
+    }
+
+    #price-mobile {
+        visibility: visible;
+    }
+
+    #price-desktop {
+        visibility: hidden;
+    }
+
+    .item-image {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .item-desc {
+        flex-basis: 0;
+        flex-grow: 2;
+    }
+
+    #price-mobile {
+        margin-top: 2vh;
+    }
+
+    .cart {
+        margin-bottom: 5vh;
+    }
+
+    .total h3 {
+        font-size: 150%;
+    }
+
+    .total h2 {
+        font-size: 200%;
+    }
+
+    .total {
+    }
 }

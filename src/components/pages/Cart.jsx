@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/cart.css";
 import Footer from '../Footer.js';
 import CartItem from '../CartItem.jsx';
+import PaypalButton from '../PayPalButton.jsx';
 
 export default function Cart(props) {
     const [cart, setCart] = useState([]);
@@ -16,18 +17,6 @@ export default function Cart(props) {
         }).catch((error) => {
             setError(error);
         });
-    }
-    const emptyCart = async () => {
-        try {
-            const res = await fetch("http://localhost:9000/cart/empty-cart", {
-                method: "DELETE",
-            });
-            await res.json();
-            fetchData();
-            props.history.push("/");
-        } catch (err) {
-            console.log(err);
-        }
     }
     const deleteItemFromCart = async (id) => {
         try {
@@ -62,13 +51,14 @@ export default function Cart(props) {
                                     <CartItem name={item.productId.name}
                                         price={item.productId.price}
                                         remove={deleteItemFromCart}
-                                        id={item.productId._id} />
+                                        id={item.productId._id} 
+                                        key={item.productId._id}/>
                                 ))}
                             </div>
                             <div className="total">
                                 <h2>Summary</h2>
                                 <h3>Total: ${payload.subTotal}.00</h3>
-                                <button>Checkout</button>
+                                <PaypalButton amount={payload.subTotal} afterPurchaseGoTo="Home"/>
                             </div>
                         </div>
                     </div>
