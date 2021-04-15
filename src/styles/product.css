@@ -39,7 +39,7 @@ body {
 }
 
 .our-story p {
-  font-size: 16px;
+  font-size: 18px;
   color: #00325c;
   line-height: 1.7em;
   padding-left: 0vw;
@@ -75,7 +75,7 @@ body {
 }
 
 .our-story-alt p {
-  font-size: 16px;
+  font-size: 18px;
   color: #00325c;
   line-height: 1.7em;
   padding-left: 0vw;
@@ -245,7 +245,7 @@ body {
 }
 
 .text-right p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7em;
   color: #00325c;
 }
@@ -265,7 +265,7 @@ body {
 }
 
 .text-left p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7em;
   color: #00325c;
 }
@@ -446,6 +446,10 @@ body {
   line-height: 46px;
   font-weight: 400;
   letter-spacing: -.5px;
+}
+
+.aboutProduct p {
+  font-size: 18px;
 }
 
 .product-top-banner {

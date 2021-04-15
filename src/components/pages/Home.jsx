@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import HomeTopBanner from '../HomeTopBanner';
+import Navbar from '../Navbar';
 import TrackVisibility from 'react-on-screen'; 
 import ExpandingImage from '../ExpandingImage';
 import HomeAboutUsBar from '../HomeAboutUsBar';
@@ -20,6 +21,8 @@ export default function Home() {
 
   return (
     <>
+      <Navbar />
+
       <HomeTopBanner barHeight={"700px"}></HomeTopBanner>
 
       <HomeProducts/>
@@ -40,7 +43,7 @@ export default function Home() {
         <GetNews/>
         </NewsContextProviderHome>
 
-      </div>
+        </div>
 
 
 

@@ -39,6 +39,7 @@ body {
 }
 
 .total {
+    margin-top: 1vw;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -81,6 +82,10 @@ button {
     border-radius: 4px;
     background-color: rgb(40, 101, 154);
     color: white;
+}
+
+button:hover {
+    background-color: rgb(15, 76, 129);;
 }
 
 .item-total button {
@@ -159,5 +164,6 @@ button {
     }
 
     .total {
+        /* margin-top: 0; */
     }
 }
