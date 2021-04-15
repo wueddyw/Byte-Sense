@@ -110,6 +110,16 @@
     }
 }
 
+.signin-error
+{
+    margin-top: 2vh;
+
+    p
+    {
+        color: rgb(189, 13, 0);
+    }
+}
+
 @media only screen and (max-width: 1300px) 
 {
     .login-container

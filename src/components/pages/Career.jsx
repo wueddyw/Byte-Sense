@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../Navbar';
 import Showcase from "../Showcase";
 import TextDiv from "../TextDiv";
 import TextDivAlt from "../TextDivAlt";
@@ -16,6 +17,8 @@ import userImage from "../../images/user.png";
 
 export default function Products() {
   return (
+    <>
+      <Navbar />
     <div className="wrapper">
       <Showcase image={image} title="Career" text="Build a career at the cutting edge of cyber security"/>
       <TextDiv title="Building a safe and secure future" direction="fade-up"
@@ -55,5 +58,6 @@ export default function Products() {
 
       <Footer />
     </div>
-  )
+    </>
+  );
 }

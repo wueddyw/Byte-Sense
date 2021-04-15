@@ -557,6 +557,14 @@ body {
   margin-top: 20px;
 }
 
+.signin-error {
+  margin-top: 2vh;
+}
+
+.signin-error p {
+  color: #bd0d00;
+}
+
 @media only screen and (max-width: 1300px) {
   .login-container {
     width: 60%;
