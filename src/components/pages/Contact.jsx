@@ -5,7 +5,7 @@ import SupportForm from '../ContactPage/SupportForm';
 import Footer from '../Footer.js';
 import Banner from "../../images/contact_back.jpg";
 import Showcase from "../Showcase";
-
+import Emailer from "../Emailer";
 
 export default function SignUp() {
     return (
@@ -13,7 +13,9 @@ export default function SignUp() {
             <Showcase image={Banner} title="Contact Us" text=""/>
             <div id="content">
                 <ContactInfo/>
-                <SupportForm/>
+                {/* <SupportForm/> */}
+                <Emailer/>
+
             </div>
             <Footer/>
         </div>
