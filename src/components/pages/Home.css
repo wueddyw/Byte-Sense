@@ -67,4 +67,5 @@
 
 .text-right.text_move-fix {
   padding: 0px;
+  /* overflow-x: hidden; */
 }

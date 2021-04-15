@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <>
       <HomeTopBanner barHeight={"700px"}></HomeTopBanner>
+
       <HomeProducts/>
       <HomeImageLinks/>
 
@@ -40,12 +41,6 @@ export default function Home() {
         </NewsContextProviderHome>
 
       </div>
-{/* 
-      <div>
-        <TrackVisibility once={true} >
-          <ExpandingImage divID = {"expand-div-12"} imgID = {"expand-img-12"}  imageLocation={zoomImage01}></ExpandingImage>
-        </TrackVisibility>
-        </div> */}
 
 
 

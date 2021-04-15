@@ -14,9 +14,7 @@ export default function HomeTopBanner(props) {
   const secureImageStyle={
      backgroundImage: "url(" + secureImage + ")"
   };
-//   const backGroundImageStyle={
-//     backgroundImage: "url(" + backgroundImage + ")"
-//  };
+
 
 
     return (
@@ -43,7 +41,9 @@ export default function HomeTopBanner(props) {
           </div>
             <div className="container">
               <div className="item item-left"></div>
-                <div className="item item-center" /*style={backGroundImageStyle}*/>
+
+                <div className="item item-center">
+
                   <div className="break-free">
                     <div className="break-free-header">
                       <div className="what-we-do what-we-do-override" data-aos="fade-left">
