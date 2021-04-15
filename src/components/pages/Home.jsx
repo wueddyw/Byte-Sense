@@ -8,6 +8,8 @@ import HomeAboutUsBar from '../HomeAboutUsBar';
 import HomeImageLinks from '../HomeImageLinks';
 import HomeProducts from '../HomeProducts';
 import Footer from "../Footer";
+import PaypalButton from '../PayPalButton';
+import ContactMe from '../Emailer';
 
 import { NewsContextProviderHome } from '../NewsContext';
 import { GetNews } from '../GetNews';
@@ -22,10 +24,10 @@ export default function Home() {
       <Navbar />
 
       <HomeTopBanner barHeight={"700px"}></HomeTopBanner>
-
-      {/* <FloatingBackground/> */}
+      {/* <FloatingBackground/> */} 
       {/* <HomeAboutUsBar barHeight={"700px"}></HomeAboutUsBar> */}
-
+      {/* <ContactMe/> */}
+      {/* <PaypalButton amount="60.00" afterPurchaseGoTo="SomeLocation"/> */}
       <HomeProducts/>
       <HomeImageLinks/>
 

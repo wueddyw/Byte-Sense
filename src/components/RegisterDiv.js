@@ -41,7 +41,6 @@ class RegisterDiv extends Component {
       fetch("/api/account/verify?token=" + token)
         .then((res) => res.json())
         .then((json) => {
-					console.log(json);
           if (json.success) {
             this.setState({
               token,
@@ -112,18 +111,44 @@ class RegisterDiv extends Component {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log("json", json);
 
         if (json.success) {
           this.setState({
             signUpError: json.message,
-            isLoading: false,
-            signUpFirstName: "",
-            signUpLastName: "",
-            signUpEmail: "",
-            signUpPassword: "",
-            redirect: true,
           });
+
+          // POST request
+          fetch("http://localhost:9000/api/account/signin", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: signUpEmail,
+              password: signUpPassword,
+            }),
+          })
+            .then((res) => res.json())
+            .then((json) => {
+              if (json.success) {
+                setInStorage("ByteSense", { token: json.token });
+                this.setState({
+                  isLoading: false,
+                  isLoggedIn: true,
+                  signUpFirstName: "",
+                  signUpLastName: "",
+                  signUpEmail: "",
+                  signUpPassword: "",
+                  token: json.token,
+                  redirect: true,
+                });
+              } else {
+                this.setState({
+                  signInError: json.message,
+                  isLoading: false,
+                });
+              }
+            });
         } else {
           this.setState({
             signUpError: json.message,
