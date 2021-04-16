@@ -29,6 +29,7 @@ class Navbar extends Component {
   }
 
   setClick = (clickState) => {
+    console.log("hi " + clickState);
     this.setState(
       prevState => ({ click: clickState })
     )
@@ -40,7 +41,7 @@ class Navbar extends Component {
     )
   };
 
-  handleClick = () => this.setClick(!this.click);
+  handleClick = () => this.setClick(!this.state.click);
   closeMobileMenu = () => this.setClick(false);
 
   onMouseEnter = () => {
@@ -155,9 +156,9 @@ class Navbar extends Component {
             <i class="fab fa-firstdraft" />
           </Link>
           <div className="menu-icon" onClick={this.handleClick}>
-            <i className={this.click ? "fas fa-times" : "fas fa-bars"} />
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={this.click ? "nav-menu active" : "nav-menu"}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to="/" className="nav-links" onClick={this.closeMobileMenu}>
                 Home

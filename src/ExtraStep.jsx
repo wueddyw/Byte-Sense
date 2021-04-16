@@ -37,11 +37,10 @@ function usePageViews(){
 
 function ExtraStep() {
   usePageViews();
-  
 
   return (
     <main>
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/AboutUs' component={AboutUs} />
@@ -59,29 +58,6 @@ function ExtraStep() {
     </main>
   );
   }
-    
-//     return (
-//       <Router>
-//         {/* <Navbar changeLogin={this.onChangeLogin.bind(this)} loginStatus={this.state.isLoggedIn}/> */}
-//         {/* <Navbar /> */}
-//         <Switch>
-//           <Route path='/' exact component={Home} />
-//           <Route path='/AboutUs' component={AboutUs} />
-//           <Route path='/Services' component={Services} />
-//           <Route path='/Product' component={Product} />
-//           <Route path='/News' component={News} />
-//           <Route path='/Career' component={Career} />
-//           <Route path='/Contact' component={Contact} />
-//           <Route path='/StandardScan' component={StandardScan}/>
-//           <Route path='/ExpertScan' component={ExpertScan}/>
-//           {/* <Route path='/Login' component={Login} changeLogin={this.onChangeLogin.bind(this)} /> */}
-//           <Route path='/Login' component={Login} />
-//           <Route path='/Cart' component={Cart} />
-//         </Switch>
-//           <Route path="/Register" component={Register} />
-//       </Router>
-//     );
-// }
 
 
 export default ExtraStep;
