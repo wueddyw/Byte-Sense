@@ -68,7 +68,7 @@ export default function Cart(props) {
                 </div>
                 <div className="total">
                   <h2>Summary</h2>
-                  <h3>Total: ${payload.subTotal}.00</h3>
+                  <h3>Total: ${payload.subTotal}</h3>
                   <PaypalButton
                     amount={payload.subTotal}
                     afterPurchaseGoTo="Home"
