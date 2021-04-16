@@ -3,7 +3,8 @@ import React, { useEffect, Component, PropTypes } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import { Redirect } from "react-router";
 import AboutUs from './components/pages/AboutUs';
 import Services from './components/pages/Services';
@@ -19,37 +20,37 @@ import Register from "./components/pages/Register";
 import AOS from "aos";
 import { getFromStorage, setInStorage } from "./utils/storage";
 import "aos/dist/aos.css"
+import ReactGa from 'react-ga'
 
 
-class ExtraStep extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   isLoggedIn: false
-    // };
 
-    // this.onChangeLogin = this.onChangeLogin.bind(this);
-  }
+function ExtraStep() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    ReactGa.initialize('UA-194679122-1')
+    ReactGa.pageview(window.location.pathname + window.location.search) 
+  }, []);
 
-  componentDidMount() {
-    AOS.init({
-      duration: 1000
-    });
-  }
+  return (
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path='/' exact component={Home} />
+        <Route path='/AboutUs' component={AboutUs} />
+        <Route path='/Services' component={Services} />
+        <Route path='/Product' component={Product} />
+        <Route path='/News' component={News} />
+        <Route path='/Career' component={Career} />
+        <Route path='/Contact' component={Contact} />
+        <Route path = '/StandardScan' component={StandardScan}/>
+        <Route path = '/ExpertScan' component={ExpertScan}/>
+        <Route path='/Login' component={Login} />
+        <Route path='/Cart' component={Cart} />
+      </Switch>
+        <Route path="/Register" component={Register} />
+    </Router>
+  );
 
-  // onChangeLogin(loginStatus) {
-  //   this.setState({
-  //     isLoggedIn: loginStatus
-  //   });
-  //   console.log("extrasteps isLoggedIn: " + this.isLoggedIn);
-  // }
-
-  
-
-  render() {
-    // const {
-    //   isLoggedIn
-    // } = this.state;
     
     return (
       <Router>
