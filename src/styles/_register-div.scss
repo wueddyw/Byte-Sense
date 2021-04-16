@@ -27,6 +27,18 @@
         font-size: 28px;
         margin-bottom: 20px;
     }
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+        line-height: 1.5;
+    }
+
+    a:hover
+    {
+        color: rgb(0, 50, 92);
+    }
 }
 
 .register

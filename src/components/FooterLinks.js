@@ -3,6 +3,7 @@ import React from "react";
 
 function FooterLinks() {
   return (
+    <>
     <div className="footer">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       <div className="column">
@@ -32,8 +33,18 @@ function FooterLinks() {
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
       </div>
+
     </div>
 
+      <div className="mobile-footer">
+        <div>
+          <a href="#" class="fa fa-facebook"></a>
+        </div>
+        <div>
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+      </div>
+    </>
     
   );
 }

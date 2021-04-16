@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../Footer";
 import './News.css';
-
+import Navbar from '../Navbar';
 import newsImage1 from './News Components/Images/news1.jpg';
 import newsHeaderImage from './News Components/Images/news_header.jpg';
 import { NewsContextProvider } from '../NewsContext';
@@ -17,6 +17,7 @@ export default function Marketing() {
 
   return (
     <>
+      <Navbar />
       <div className="temp-header  "/>
       
       <div className="news-page-div">

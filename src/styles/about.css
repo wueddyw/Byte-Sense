@@ -99,7 +99,7 @@ body {
 }
 
 .our-story p {
-  font-size: 16px;
+  font-size: 18px;
   color: #00325c;
   line-height: 1.7em;
   padding-left: 0vw;
@@ -135,7 +135,7 @@ body {
 }
 
 .our-story-alt p {
-  font-size: 16px;
+  font-size: 18px;
   color: #00325c;
   line-height: 1.7em;
   padding-left: 0vw;
@@ -305,7 +305,7 @@ body {
 }
 
 .text-right p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7em;
   color: #00325c;
 }
@@ -325,7 +325,7 @@ body {
 }
 
 .text-left p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7em;
   color: #00325c;
 }
@@ -398,6 +398,10 @@ body {
   margin: 10px 10px 20px 10px;
 }
 
+.mobile-footer {
+  display: none;
+}
+
 .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,6 +447,26 @@ body {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .column {
+    display: none;
+  }
+  .mobile-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
 .login-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,6 +509,16 @@ body {
 .login-container h3 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+
+.login-container a {
+  text-decoration: none;
+  color: black;
+  line-height: 1.5;
+}
+
+.login-container a:hover {
+  color: #00325c;
 }
 
 .login {
@@ -557,6 +591,14 @@ body {
   margin-top: 20px;
 }
 
+.signin-error {
+  margin-top: 2vh;
+}
+
+.signin-error p {
+  color: #bd0d00;
+}
+
 @media only screen and (max-width: 1300px) {
   .login-container {
     width: 60%;
@@ -615,6 +657,16 @@ body {
 .register-container h3 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+
+.register-container a {
+  text-decoration: none;
+  color: black;
+  line-height: 1.5;
+}
+
+.register-container a:hover {
+  color: #00325c;
 }
 
 .register {

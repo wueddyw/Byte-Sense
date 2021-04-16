@@ -1,5 +1,6 @@
 const cartRepository = require('./repository')
 const productRepository = require('../products/repository');
+const { parse } = require('@fortawesome/fontawesome-svg-core');
 
 exports.addItemToCart = async (req, res) => {
     const {
@@ -41,7 +42,7 @@ exports.addItemToCart = async (req, res) => {
                     productId: productId,
                     quantity: quantity,
                     price: productDetails.price,
-                    total: parseInt(productDetails.price * quantity)
+                    total: parseFloat(productDetails.price * quantity)
                 })
                 cart.subTotal = cart.items.map(item => item.total).reduce((acc, next) => acc + next);
             }
@@ -69,7 +70,7 @@ exports.addItemToCart = async (req, res) => {
                     total: parseInt(productDetails.price * quantity),
                     price: productDetails.price
                 }],
-                subTotal: parseInt(productDetails.price * quantity)
+                subTotal: parseFloat(productDetails.price * quantity)
             }
             cart = await cartRepository.addItem(cartData)
             // let data = await cart.save();
@@ -143,12 +144,11 @@ exports.removeItemFromCart = async (req, res) => {
         }
         //--If Cart Exists ----
         if (cart) {
-            console.log("if cart");
             //---- Check if index exists ----
             const indexFound = cart.items.findIndex(item => item.productId.id == productId);
             if (indexFound !== -1) {
                 cart.items.splice(indexFound, 1);
-                cart.subTotal -= 1;
+                cart.subTotal = cart.items.map(item => item.total).reduce((acc, next) => acc + next, 0);
             }
             else {
                 return res.status(400).json({

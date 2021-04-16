@@ -47,7 +47,7 @@ export default function Emailer () {
 
     //used to actually send the email
   function sendEmail(e) {
-    console.log("hi");
+    // console.log("hi");
     e.preventDefault();
 
     emailjs.sendForm('service_s0l8fpg', 'contact_form', e.target, 'user_qUIF0RuA5mofg3cDvYJRZ')
@@ -77,22 +77,31 @@ function FixMessage(e){
 
   return (
       <>
+      <div className="contact-me-flex">
+      <div className="contact-me-label-break"/>
+      <div className="contact-me-label-break"/>
         <div className="contact-me-div">
+            <div className="contact-me-header">
+                Submit A Form
+            </div>
+            <div className="contact-me-label-break"></div>
             <Form id="hiTest" className="contact-form" onSubmit={sendEmail}>
                 <Form.Control type="hidden" name="contact_number" value={Math.floor(Math.random()*(100000-0+1)+0).toString()}/>
-                <FormLabel>Name<br/></FormLabel>
+                <FormLabel className="contact-me-label">Name<br/></FormLabel>
                 <Form.Control className="contact-me-textbox" type="text" name="user_name" value={nameValue} onChange={FixName}/><br/>
-                <FormLabel>Email<br/></FormLabel>
+                <div className="contact-me-label-break"></div>
+                <FormLabel className="contact-me-label">Email<br/></FormLabel>
                 <Form.Control className="contact-me-textbox" type="email" name="user_email" value={emailValue} onChange={FixEmail}/><br/>
-                <FormLabel>Message<br/></FormLabel>
+                <div className="contact-me-label-break"></div>
+                <FormLabel className="contact-me-label">Message<br/></FormLabel>
                 <Form.Control className="contact-me-textarea" as="textarea" rows={8} name="message" value={messageValue} onChange={FixMessage}/><br/>
+                <div className="contact-me-label-break"></div>
                 <Button  form="hiTest" className="contact-me-submit" type="submit" value="Send"  variant="primary" onClick={!isLoading ? handleClick : null}>
-                    {isLoading ? 'Sending...' : 'Send'}
+                    {isLoading ? 'Submitting...' : 'Submit'}
                 </Button><br/>
             </Form>
-
-            
         </div>
+      </div>
     </>
   );
 }

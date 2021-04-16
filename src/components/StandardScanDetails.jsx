@@ -4,7 +4,7 @@ export default function StandardScanDetails() {
   const [products, setProducts] = useState([]);
   const [haserror, setError] = useState(false);
   const fetchData = async () => {
-    const res = await fetch("http://localhost:9000/products/605d1cdac8e216438c1336e7");
+    const res = await fetch("http://localhost:9000/products/607923b4b0cf1db650f24886");
     res.json().then((res) => {
       console.log(res.data);
       setProducts(res.data);
