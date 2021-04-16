@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
 import AboutUs from './components/pages/AboutUs';
 import Services from './components/pages/Services';
 import Product from './components/pages/Product';
@@ -17,11 +17,14 @@ import Cart from './components/pages/Cart';
 import AOS from "aos";
 import Register from "./components/pages/Register";
 import "aos/dist/aos.css"
+import ReactGa from 'react-ga'
+
 
 function ExtraStep() {
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    ReactGa.initialize('UA-194679122-1')
+    ReactGa.pageview(window.location.pathname + window.location.search) 
   }, []);
 
   return (
