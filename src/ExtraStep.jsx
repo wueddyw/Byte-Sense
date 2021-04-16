@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 
-import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import { Redirect } from "react-router";
 import AboutUs from './components/pages/AboutUs';
 import Services from './components/pages/Services';
@@ -22,17 +22,24 @@ import { getFromStorage, setInStorage } from "./utils/storage";
 import "aos/dist/aos.css"
 import ReactGa from 'react-ga'
 
-
-
-function ExtraStep() {
+function usePageViews(){
+  let location = useLocation();
   useEffect(() => {
     AOS.init({ duration: 1000 });
-    ReactGa.initialize('UA-194679122-1')
-    ReactGa.pageview(window.location.pathname + window.location.search) 
-  }, []);
+    if(!window.GA_INITIALIZED){
+      ReactGa.initialize('UA-194679122-1')
+      window.GA_INITIALIZED = true;
+    }
+    ReactGa.set({page:location.pathname})
+    ReactGa.pageview(location.pathname) 
+  }, [location]);
+}
+
+function ExtraStep() {
+  usePageViews();
 
   return (
-    <Router>
+    <main>
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
@@ -48,31 +55,8 @@ function ExtraStep() {
         <Route path='/Cart' component={Cart} />
       </Switch>
         <Route path="/Register" component={Register} />
-    </Router>
+    </main>
   );
-
-    
-    return (
-      <Router>
-        {/* <Navbar changeLogin={this.onChangeLogin.bind(this)} loginStatus={this.state.isLoggedIn}/> */}
-        {/* <Navbar /> */}
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/AboutUs' component={AboutUs} />
-          <Route path='/Services' component={Services} />
-          <Route path='/Product' component={Product} />
-          <Route path='/News' component={News} />
-          <Route path='/Career' component={Career} />
-          <Route path='/Contact' component={Contact} />
-          <Route path='/StandardScan' component={StandardScan}/>
-          <Route path='/ExpertScan' component={ExpertScan}/>
-          {/* <Route path='/Login' component={Login} changeLogin={this.onChangeLogin.bind(this)} /> */}
-          <Route path='/Login' component={Login} />
-          <Route path='/Cart' component={Cart} />
-        </Switch>
-          <Route path="/Register" component={Register} />
-      </Router>
-    );
   }
 
 
