@@ -4,7 +4,7 @@ export default function ExpertScanDetails() {
   const [products, setProducts] = useState([]);
   const [haserror, setError] = useState(false);
   const fetchData = async () => {
-    const res = await fetch("http://localhost:9000/products/605d1d05c8e216438c1336e8");
+    const res = await fetch("http://localhost:9000/products/60792408b0cf1db650f24887");
     res.json().then((res) => {
       console.log(res.data);
       setProducts(res.data);

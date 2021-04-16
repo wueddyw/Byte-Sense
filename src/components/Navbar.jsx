@@ -64,7 +64,11 @@ class Navbar extends Component {
   // }
 
   componentDidMount() {
-    const token = getFromStorage("ByteSense").token;
+    let token = "";
+    if (getFromStorage("ByteSense") !== null) {
+      token = getFromStorage("ByteSense").token;
+    }
+    
     console.log("Token = " + token);
 
     // Check if token is set to load login or logout in navbar
