@@ -1,116 +1,264 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Dropdown from './Dropdown';
+import React, { useState, Component } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
+import "./Navbar.css";
+import Dropdown from "./Dropdown";
+import { getFromStorage, setInStorage } from "../utils/storage";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      token: "",
+      isLoading: true,
+      isLoggedIn: false,
+      logoutError: "",
+      click: false,
+      dropdown: false,
+    };
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+    this.onLogout = this.onLogout.bind(this);
+    this.setClick = this.setClick.bind(this);
+    this.setDropdown = this.setDropdown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
+  }
 
-  const onMouseEnter = () => {
+  setClick = (clickState) => {
+    this.setState(
+      prevState => ({ click: clickState })
+    )
+  };
+
+  setDropdown = (dropdownState) => {
+    this.setState(
+      prevState => ({ dropdown: dropdownState })
+    )
+  };
+
+  handleClick = () => this.setClick(!this.click);
+  closeMobileMenu = () => this.setClick(false);
+
+  onMouseEnter = () => {
     if (window.innerWidth < 1500) {
-      setDropdown(false);
+      this.setDropdown(false);
     } else {
-      setDropdown(true);
+      this.setDropdown(true);
     }
   };
 
-  const onMouseLeave = () => {
+  onMouseLeave = () => {
     if (window.innerWidth < 1500) {
-      setDropdown(false);
+      this.setDropdown(false);
     } else {
-      setDropdown(false);
+      this.setDropdown(false);
     }
   };
 
-  return (
-    <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          Byte-Sense
-          <i class='fab fa-firstdraft' />
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+  // onChangeLogin() {
+  //   this.props.changeLogin(this.state.isLoggedIn);
+  // }
 
-        <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
+  componentDidMount() {
+    const token = getFromStorage("ByteSense").token;
+    console.log("Token = " + token);
 
-          <li className='nav-item'>
-            <Link to='/AboutUs' className='nav-links' onClick={closeMobileMenu}>
-              About Us
-            </Link>
-          </li>
-         
-          <li className='nav-item'>
-            <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
-              Services
-            </Link>
-          </li>
+    // Check if token is set to load login or logout in navbar
+    if (token) {
+      // Verify token
+      fetch("http://localhost:9000/api/account/verify?token=" + token)
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+          console.log("Token: " + token);
+          if (json.success) {
+            this.setState({
+              token,
+              isLoading: false,
+              isLoggedIn: true,
+            });
+            this.forceUpdate();
+          } else {
+            this.setState({
+              isLoading: false
+            });
+          }
+        });
+    } else {
+      this.setState({
+        isLoading: false,
+      });
+    }
+  }
 
-          <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            <Link to='/Product' className='nav-links' onClick={closeMobileMenu}>
-              Product
-            </Link>
-            {dropdown && <Dropdown />}
-          </li>
+  onLogout() {
+    this.setState({
+      isLoading: true,
+    });
 
-          <li className='nav-item'>
-            <Link to='/News' className='nav-links' onClick={closeMobileMenu}>
-              News
-            </Link>
-          </li>
+    // GET request
+    const obj = getFromStorage("ByteSense");
+    
+    if (obj && obj.token) {
+      const token = obj.token;
 
-          <li className='nav-item'>
-            <Link to='/Career' className='nav-links' onClick={closeMobileMenu}>
-              Career
-            </Link>
-          </li>
+      // Verify token
+      fetch("http://localhost:9000/api/account/logout?token=" + token)
+        .then((res) => res.json())
+        .then((json) => {
+          if (json.success) {
+            this.setState({
+              token: "",
+              isLoading: false,
+              isLoggedIn: false
+            });
+            setInStorage("ByteSense", { token: null });
+            // this.onChangeLogin().bind(this);
+            // this.onChangeLogin();
+            this.forceUpdate();
+          } else {
+            this.setState({
+              isLoading: false,
+            });
+          }
+        });
+    } else {
+      this.setState({
+        isLoading: false,
+      });
+    }
+  }
 
-          <li className='nav-item'>
-            <Link to='/Contact' className='nav-links' onClick={closeMobileMenu}>
-              Contact
-            </Link>
-          </li>
+  render() {
+    const { 
+      token,
+      isLoading, 
+      isLoggedIn, 
+      logoutError, 
+      click,
+      dropdown
+    } = this.state;
 
-          <li className='nav-item'>
-            <Link to='/Cart' className='nav-links' onClick={closeMobileMenu}>
-              Cart
-            </Link>
-          </li>
+    return (
+      <>
+        <nav className="navbar">
+          <Link to="/" className="navbar-logo" onClick={this.closeMobileMenu}>
+            ByteSense
+            <i class="fab fa-firstdraft" />
+          </Link>
+          <div className="menu-icon" onClick={this.handleClick}>
+            <i className={this.click ? "fas fa-times" : "fas fa-bars"} />
+          </div>
+          <ul className={this.click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={this.closeMobileMenu}>
+                Home
+              </Link>
+            </li>
 
-          <li className='nav-item'>
+            <li className="nav-item">
+              <Link
+                to="/AboutUs"
+                className="nav-links"
+                onClick={this.closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/Services"
+                className="nav-links"
+                onClick={this.closeMobileMenu}
+              >
+                Services
+              </Link>
+            </li>
+
+            <li
+              className="nav-item"
+              onMouseEnter={this.onMouseEnter}
+              onMouseLeave={this.onMouseLeave}
+            >
+              <Link
+                to="/Product"
+                className="nav-links"
+                onClick={this.closeMobileMenu}
+              >
+                Product
+              </Link>
+              {this.dropdown && <Dropdown />}
+            </li>
+
+            <li className="nav-item">
+              <Link to="/News" className="nav-links" onClick={this.closeMobileMenu}>
+                News
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/Career"
+                className="nav-links"
+                onClick={this.closeMobileMenu}
+              >
+                Career
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/Contact"
+                className="nav-links"
+                onClick={this.closeMobileMenu}
+              >
+                Contact
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/Cart" className="nav-links" onClick={this.closeMobileMenu}>
+                Cart
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <div class="lang-menu">
-                <div class="selected-lang">English
-                </div>
+                <div class="selected-lang">English</div>
                 <ul>
                   <li>
                     <a>Chinese</a>
                   </li>
                 </ul>
               </div>
-          </li>
+            </li>
 
-          <li className='nav-item'>
-            <Link to='/Login' className='nav-links' onClick={closeMobileMenu}>
-              Login
-            </Link>
-          </li>
-
-        </ul>
-
-      </nav>
-    </>
-  );
+            {isLoggedIn ? (
+              <li className="nav-item">
+                <Link to="/" className="nav-links"
+                  onClick={() => {
+                    this.closeMobileMenu();
+                    this.onLogout();
+                  }}>Logout
+                </Link>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <Link to="/Login" className="nav-links"
+                  onClick={this.closeMobileMenu}>
+                  Login
+                </Link>
+              </li>
+            )}
+          </ul>
+        </nav>
+      </>
+    );
+  }
 }
-
 export default Navbar;

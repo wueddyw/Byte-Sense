@@ -6,8 +6,6 @@ const router = express.Router();
 
 router.post('/api/account/signup', (req, res, next) =>
 {
-    console.log("Reached start of route");
-    
     const { body } = req;
     const
     {
@@ -23,7 +21,7 @@ router.post('/api/account/signup', (req, res, next) =>
     if (!firstName)
     {
         console.log("first name error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: First name cannot be blank"
@@ -33,7 +31,7 @@ router.post('/api/account/signup', (req, res, next) =>
     if (!lastName)
     {
         console.log("last name error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: Last name cannot be blank"
@@ -43,7 +41,7 @@ router.post('/api/account/signup', (req, res, next) =>
     if (!email)
     {
         console.log("email error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: Email cannot be blank"
@@ -53,7 +51,7 @@ router.post('/api/account/signup', (req, res, next) =>
     if (!password)
     {
         console.log("password error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: Password cannot be blank"
@@ -73,7 +71,7 @@ router.post('/api/account/signup', (req, res, next) =>
         if (err)
         {
             console.log("line 62");
-            return res.end
+            return res.json
             ({
                 success: false,
                 message: "Error: Server error"
@@ -81,7 +79,7 @@ router.post('/api/account/signup', (req, res, next) =>
         } else if (previousUsers.length > 0)
         {
             console.log("acc already exists");
-            return res.end
+            return res.json
             ({
                 success: false,
                 message: "Error: Account already exists"
@@ -100,14 +98,14 @@ router.post('/api/account/signup', (req, res, next) =>
         {
             if (err)
             {
-                return res.end
+                return res.json
                 ({
                     success: false,
                     message: "Error: Server error"
                 });
             }
             console.log("Successfully saved user to DB");
-            return res.send
+            return res.json
             ({
                 success: true,
                 message: "Signed up"
@@ -126,7 +124,7 @@ router.post("/api/account/signin", (req, res, next) =>
     if (!email)
     {
         console.log("email error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: Email cannot be blank"
@@ -136,7 +134,7 @@ router.post("/api/account/signin", (req, res, next) =>
     if (!password)
     {
         console.log("password error");
-        return res.end
+        return res.json
         ({
             success: false,
             message: "Error: Password cannot be blank"
@@ -153,7 +151,7 @@ router.post("/api/account/signin", (req, res, next) =>
         if (err)
         {
             console.log("server error");
-            return res.end
+            return res.json
             ({
                 success: false,
                 message: "Error: server error"
@@ -163,7 +161,7 @@ router.post("/api/account/signin", (req, res, next) =>
         if (users.length != 1)
         {
             console.log("invalid email");
-            return res.end
+            return res.json
             ({
                 success: false,
                 message: "Error: Invalid email"
@@ -175,7 +173,7 @@ router.post("/api/account/signin", (req, res, next) =>
         if (!user.validPassword(password))
         {
             console.log("invalid password");
-            return res.send
+            return res.json
             ({
                 success: false,
                 message: "Error: Invalid password"
@@ -190,13 +188,13 @@ router.post("/api/account/signin", (req, res, next) =>
             if (err)
             {
                 console.log("??? error");
-                return res.send({
+                return res.json({
                     success: false,
                     message: "Error: server error"
                 });
             }
 
-            return res.send({
+            return res.json({
                 success: true,
                 message: "Valid sign in",
                 token: doc._id
@@ -211,6 +209,7 @@ router.get("/api/account/verify", (req, res, next) =>
     // Get the token
     const { query } = req;
     const { token } = query;
+    console.log("token: " + token);
 
     // Verify the token is one of a kind and it is not deleted
     UserSession.find({
@@ -220,7 +219,7 @@ router.get("/api/account/verify", (req, res, next) =>
     {
         if (err)
         {
-            return res.send({
+            return res.json({
                 success: false,
                 message: "Error: Server error"
             });
@@ -228,13 +227,13 @@ router.get("/api/account/verify", (req, res, next) =>
 
         if (sessions.length != 1)
         {
-            return res.send({
+            return res.json({
                 success: false,
                 message: "Error: Invalid"
             });
         } else
         {
-            return res.send({
+            return res.json({
                 success: true,
                 message: "Valid user session"
             });
@@ -259,13 +258,13 @@ router.get("/api/account/logout", (req, res, next) =>
     {
         if (err)
         {
-            return res.send({
+            return res.json({
                 success: false,
                 message: "Error: Server error"
             });
         }
 
-            return res.send({
+            return res.json({
                 success: true,
                 message: "Logged out"
             });

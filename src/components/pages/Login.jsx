@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import Navbar from "../Navbar";
 import LoginDiv from "../LoginDiv";
 import Footer from "../Footer";
 
@@ -21,10 +22,18 @@ import Footer from "../Footer";
 // }
 
 export default function Login() {
-    return (
-        <div className="wrapper">
-            <LoginDiv direction="fade-up" title="Login" fieldName1="Email" fieldName2="Password" />
-            <Footer />
-        </div>
-    );
+  return (
+    <>
+      <Navbar />
+      <div className="wrapper">
+        <LoginDiv
+          direction="fade-up"
+          title="Login"
+          fieldName1="Email"
+          fieldName2="Password"
+        />
+        <Footer />
+      </div>
+    </>
+  );
 }
