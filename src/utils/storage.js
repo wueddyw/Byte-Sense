@@ -12,7 +12,6 @@ export function getFromStorage(key)
         if (valueStr)
         {
             return JSON.parse(valueStr);
-            // return valueStr;
         }
 
         return null;

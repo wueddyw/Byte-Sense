@@ -147,7 +147,7 @@ class Navbar extends Component {
       <>
         <nav className="navbar">
           <Link to="/" className="navbar-logo" onClick={this.closeMobileMenu}>
-            Byte-Sense
+            ByteSense
             <i class="fab fa-firstdraft" />
           </Link>
           <div className="menu-icon" onClick={this.handleClick}>

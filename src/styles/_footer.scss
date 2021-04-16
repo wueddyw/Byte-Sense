@@ -54,6 +54,11 @@
     }
 }
 
+.mobile-footer
+{
+    display: none;
+}
+
 .copyright
 {
     @include flexCenter(row);
@@ -88,4 +93,24 @@
   }
 
 
+@media screen and (max-width: 768px)
+{
+    .footer
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
+    .column
+    {
+        display: none;
+    }
+
+    .mobile-footer
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

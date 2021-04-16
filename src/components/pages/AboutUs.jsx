@@ -23,7 +23,7 @@ export default function ContactUs() {
         <TextDiv
           title="Our Story"
           direction="fade-up"
-          content="Byte Sense was formed with one mission in mind - to provide the world
+          content="ByteSense was formed with one mission in mind - to provide the world
           with a safer place in the cyberspace. We provide customers with our
           new Cybersecurity Antivirus protection which is more diverse. The
           product can thoroughly scan all computer systems and server
@@ -65,7 +65,7 @@ export default function ContactUs() {
           image={image3}
           direction="fade-left"
           title="Location"
-          content="Byte Sense is headquartered in Vancouver, Canada – the next IT hub
+          content="ByteSense is headquartered in Vancouver, Canada – the next IT hub
         of North America. Although Canada and United States are deeply
         aware of Cyberattacks because due to the fact that we are the
         highest rank countries being attacked online comparing to the

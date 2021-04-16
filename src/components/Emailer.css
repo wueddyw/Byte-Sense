@@ -1,5 +1,6 @@
 .contact-me-label {
   font-size: 1em;
+  line-height: 1.5;
 }
 
 .contact-me-textbox {
@@ -26,6 +27,7 @@
 }
 
 .contact-me-header {
+  margin-bottom: 2vh;
   text-align: center;
   color: #00325c;
   font-size: 3.5em;

@@ -5,7 +5,7 @@ class Copyright extends Component {
     return (
       <div className="copyright">
         <div>
-          <p>©2021 Byte Sense. All rights reservered</p>
+          <p>©2021 ByteSense. All rights reservered</p>
         </div>
       </div>
     );

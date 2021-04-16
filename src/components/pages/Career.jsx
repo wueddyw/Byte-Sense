@@ -33,7 +33,7 @@ export default function Products() {
         <TextDiv
           title="Building a safe and secure future"
           direction="fade-up"
-          content="Byte Sense was formed with one mission in mind - to provide the world
+          content="ByteSense was formed with one mission in mind - to provide the world
         with a safer place in the cyberspace. We provide customers with our
         new Cybersecurity Antivirus protection which is more diverse. The
         product can thoroughly scan all computer systems and server
@@ -53,7 +53,7 @@ export default function Products() {
         <TextDivAlt
           title="Our mission and values"
           direction="fade-up"
-          content="Byte Sense is a place where people can connect, grow, and make an 
+          content="ByteSense is a place where people can connect, grow, and make an 
         impact. Whether it is to pursue excellence, or to build a community, these are our guiding principles:"
         />
         <Values
@@ -83,7 +83,7 @@ export default function Products() {
         <TextDivAlt
           title="Departments"
           direction="fade-up"
-          content="Byte Sense is shaping the future for cyber security, and you could be part of
+          content="ByteSense is shaping the future for cyber security, and you could be part of
            it. We are constantly looking for talent in a variety of fields, from mathematics and 
            software engineering to sales and marketing. If you want to work at the cutting edge 
            of technology and are willing to rise to a challenge, we'd love to hear from you."
