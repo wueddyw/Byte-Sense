@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { getFromStorage, setInStorage } from "../utils/storage";
 
 export default function StandardScanDetails() {
   const [products, setProducts] = useState([]);
@@ -12,25 +13,19 @@ export default function StandardScanDetails() {
       setError(error);
     });
   }
-  const addToCart = async (id) => {
-    try {
-      const response = await fetch("http://localhost:9000/cart", {
-        method: "POST",
-        body: JSON.stringify({
-          productId: id,
-          quantity: 1,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
-      let data = await response.json();
-      alert("Item Added To Cart");
-      console.log(data);
-    } catch (err) {
-      alert("Something Went Wrong");
-      console.log(err);
+  const addToCart = (product) => {
+    let cart = [];
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'));
     }
+    const exists = cart.some(prod => prod._id === product._id)
+    if (!exists) {
+      console.log(product);
+      console.log(cart);
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    alert("Item Added To Cart");
   }
   useEffect(() => {
     fetchData();
@@ -42,7 +37,7 @@ export default function StandardScanDetails() {
         <li>Scan your computer and server </li>
         <li>Scan malicious and vulnerabilities </li>
         <li>Export reports in PDF and CSV files formats</li>
-        <button onClick={() => addToCart(products['_id'])}>Add to Cart</button>
+        <button onClick={() => addToCart(products)}>Add to Cart</button>
       </ul>
     </div>
   );
