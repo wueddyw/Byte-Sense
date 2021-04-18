@@ -1,18 +1,127 @@
-#header-services {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../images/services_back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 100%;
+@import url("https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext");
+
+.service-body {
+    background-color: rgb(240, 240, 240);
 }
 
-#header-services h3 {
-    color: #fff;
-    font-size: 55px;
+#service-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 5vh;
+    margin: 8vh 10vw 8vh 10vw;
+    grid-auto-flow: dense;
+}
+
+#service-content img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 10px 10px #888888;
+}
+
+#service-content h3 {
+    color: #7E7D80;
+}
+
+#service-content p {
+    font-size: 18px;
+    color: #00325c;
+}
+
+.service-right {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-left: 2vw;
+    grid-column: 2;
+}
+
+.service-left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-right: 2vw;
+    grid-column: 1;
+}
+
+#service-content h3 {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: 32px;
+}
+
+.image-left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-right: 3vw;
+    grid-column: 1;
+}
+
+.image-right {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 3vw;
+    grid-column: 2;
+}
+
+.service-body {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        position: relative;
+    }
+
+    .service-body {
+        overflow-x: hidden;
+    }
+
+    #service-content h3 {
+        text-align: center;
+        margin-bottom: 3vh;
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        position: relative;
+    }
+
+    .service-body {
+        overflow-x: hidden;
+    }
+
+    #service-content h3 {
+        text-align: center;
+        margin-bottom: 3vh;
+        font-size: 150%;
+    }
+
+    #service-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-left {
+        margin: 0;
+    }
+
+    .image-right {
+        margin-left: 0;
+    }
+
+    .service-left {
+        padding: 1vw;
+    }
+
+    .service-right {
+        padding: 1vw;
+    }
 }

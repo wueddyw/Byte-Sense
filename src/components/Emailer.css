@@ -1,0 +1,124 @@
+.contact-me-label {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.contact-me-textbox {
+  width: 600px;
+  font-size: 1.5em;
+  padding: 0.2em;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  outline: none;
+}
+
+.contact-me-textarea {
+  width: 600px;
+  font-size: 1.5em;
+  padding: 0.2em;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  outline: none;
+}
+
+.contact-me-label-break {
+  padding-bottom: 10px;
+}
+
+.contact-me-header {
+  margin-bottom: 2vh;
+  text-align: center;
+  color: #00325c;
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.contact-me-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(40, 101, 154);
+  width: auto;
+  font-size: 1.3em;
+}
+
+.contact-me-flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-me-div:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-me-textbox {
+    width: 80vw;
+    font-size: 3.5vw;
+    padding: 0.5vw;
+    border-radius: 0.5vw;
+    border: 1px solid rgb(204, 204, 204);
+  }
+
+  .contact-me-textarea {
+    width: 80vw;
+    font-size: 3.5vw;
+    padding: 0.2em;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+  }
+
+  .contact-me-header {
+    font-size: 8vw;
+  }
+
+  .contact-me-submit {
+    padding: 4vw 8vw;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(40, 101, 154);
+    width: auto;
+    font-size: 5vw;
+  }
+
+  .contact-me-label-break {
+    padding-bottom: 3vw;
+  }
+
+  .contact-me-label {
+    font-size: 5vw;
+  }
+}
+
+/* submit button fix */
+@media screen and (max-width: 1500px) {
+  .contact-me-submit {
+    display: block;
+  }
+}

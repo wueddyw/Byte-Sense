@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:regular,bold,italic&subset=latin,latin-ext');
+
 @mixin flexCenter($direction)
 {
     display: flex;
     flex-direction: $direction;
-    // justify-content: center;
-    // align-items: center;
 }
 
 .showcase 
@@ -16,45 +18,60 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 45vw;
+    height: 80vh;
     width: 100%;
     margin-top: 80px;
 
     h3
     {
         font-size: 55px;
-        font-family: "PT Sans", sans-serif;
-        // color: white;
-        // color: rgb(15, 76, 129);
+        font-family: "Segoe UI", sans-serif;
+        text-shadow: 2px 2px #000000;
     }
+
+    
 }
 
 .showcase-text
 {
-    margin-top: 20vh;
+    margin-top: 8vw;
     margin-left: 7vw;
+
+    p
+    {
+        margin-top: 25px;
+        font-size: 1.5vw;
+        color: white;
+        text-shadow: 2px 2px #000000;
+    }
 
     h3
     {
-        font-size: 55px;
+        font-size: 4.5em;
         font-weight: normal;
         color: white;
-        // color: rgb(15, 76, 129);
     }
 }
 
-// .showcase-overlay
-// {
-//     @include flexCenter(column);
+// Tablet
+@media screen and (max-width: 768px) 
+{
+    .showcase-text
+    {
 
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
+        p
+        {
+            font-size: 2.8vw;
+        }
 
-//     h3
-//     {
-//         font-size: 55px;
-//         color: white;
-//     }
-// }
+        h3
+        {
+            font-size: 5.4vw;
+        }
+    }
+    
+    h3
+    {
+        font-size: 14vw;
+    }
+}

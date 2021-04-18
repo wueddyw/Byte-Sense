@@ -1,30 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Segoe+UI:regular,bold,italic&subset=latin,latin-ext");
+
 .home-top-banner {
-  background-image: url("../images/img-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 80vh;
-  display: flex;
-  /* margin-bottom: 1000px; */
-  padding-top: 100px;
+
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  width: 100%;
 }
 
 .home-top-banner-slogan {
   color: #fff;
-  font-size: 4.5vw;
+  font-size: 4.5em;
   justify-content: left;
-  padding-top: 7vh;
-  padding-left: 7vw;
+  margin-top: 4vw;
+  margin-left: 7vw;
   position: absolute;
   z-index: 1;
+  text-shadow: 2px 2px black;
+
+  font-family: "Segoe UI", sans-serif;
 }
 
 .home-top-banner-sub-slogan {
   color: #fff;
   font-size: 1.5vw;
   justify-content: left;
-  padding-top: 32vh;
+  padding-top: 280px;
   padding-left: 7vw;
   position: absolute;
   z-index: 1;
+  font-family: "Segoe UI", sans-serif;
+
+  text-shadow: 2px 2px black;
+}
+
+.home-video-banner {
+  padding-top: 80px;
+}
+
+.home-video-video {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+
+.flex-center {
+  color: #00325c;
+  font-family: "Raleway";
+}
+
+.home-video-banner {
+  padding-top: 80px;
+}
+
+.home-video-video {
+  padding: 0px;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .home-top-banner {
+    height: 120vw;
+    display: flex;
+    /* margin-bottom: 1000px; */
+    padding-top: 80px;
+    top: 6vw;
+  }
+
+  .home-top-banner-slogan {
+    font-size: 5.4vw;
+  }
+
+  .home-top-banner-sub-slogan {
+    font-size: 2.8vw;
+    padding-top: 22vw;
+    padding-left: 10vw;
+  }
 }

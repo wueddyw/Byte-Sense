@@ -1,0 +1,25 @@
+.confirmBody {
+    margin-top: 80px;
+    padding: 2vw;
+}
+
+.confirmBody > p{
+    margin-top: 2vh;
+    font-size: 18px;
+    border: 1px;
+}
+
+.confirmBody h2 {
+    font-size: 2vw;
+}
+
+.return {
+    font-size: 18px;
+    margin-top: 2vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .confirmBody h2 {
+        font-size: 24px;
+    }
+}

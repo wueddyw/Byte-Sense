@@ -1,0 +1,71 @@
+.news {
+  font-family: "Raleway";
+
+  overflow-x: hidden;
+}
+
+.home-news-header {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  background-color: #142955;
+  font-size: 3em;
+  color: white;
+  font-family: "PT Sans";
+  text-shadow: 2px 2px black;
+}
+
+.news-body {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding-top: 100px;
+}
+
+.center {
+  width: 100%; /* Can be in percentage also. */
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.home-page-bottom-break {
+  height: 100px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .news.home-news-header {
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    font-family: "PT Sans", sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .news-page-image-div {
+    display: none;
+  }
+
+  .home-news-header {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 10vw;
+  }
+
+  .home-page-bottom-break {
+    height: 5vw;
+  }
+}
+
+.what-we-do.what-we-do-override {
+  margin: 0px;
+}
+
+.text-right.text_move-fix {
+  padding: 0px;
+  /* overflow-x: hidden; */
+}

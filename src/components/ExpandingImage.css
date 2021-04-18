@@ -1,3 +1,10 @@
+.ei-root {
+  display: block;
+  float: left;
+  text-align: center;
+  padding-left: 130px;
+}
+
 .expand-when-viewed-div {
   display: table-cell;
   width: 300px;
@@ -11,11 +18,11 @@
   width: 120px;
   height: 120px;
 
-  -webkit-transition: width 500ms ease, height 500ms ease;
-  -moz-transition: width 500ms ease, height 500ms ease;
-  -o-transition: width 500ms ease, height 500ms ease;
-  -ms-transition: width 500ms ease, height 500ms ease;
-  transition: width 500ms ease, height 500ms ease;
+  -webkit-transition: width 2000ms ease, height 2000ms ease;
+  -moz-transition: width 2000ms ease, height 2000ms ease;
+  -o-transition: width 2000ms ease, height 2000ms ease;
+  -ms-transition: width 2000ms ease, height 2000ms ease;
+  transition: width 2000ms ease, height 2000ms ease;
 
   opacity: 0;
 }
@@ -25,10 +32,10 @@
   height: 300px;
   opacity: 1;
 
-  -webkit-animation: fadeInFromNone 500ms ease-out;
-  -moz-animation: fadeInFromNone 500ms ease-out;
-  -o-animation: fadeInFromNone 500ms ease-out;
-  animation: fadeInFromNone 500ms ease-out;
+  -webkit-animation: fadeInFromNone 2000ms ease-out;
+  -moz-animation: fadeInFromNone 2000ms ease-out;
+  -o-animation: fadeInFromNone 2000ms ease-out;
+  animation: fadeInFromNone 2000ms ease-out;
   opacity: 1;
 }
 

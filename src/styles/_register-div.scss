@@ -1,0 +1,105 @@
+@mixin flexCenter($direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-wrapper
+{
+    @include flexCenter(column);
+}
+
+.register-container
+{
+    @include flexCenter(column);
+
+    margin: 20vh 0 12vh 0;
+    padding: 35px 25px 35px 25px;
+    border: 1px solid rgba(230, 230, 230, 0.4);
+    box-shadow: 0px 10px 10px #888888;
+    background-color: white;
+    width: 40%;
+
+    h3
+    {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: black;
+        line-height: 1.5;
+    }
+
+    a:hover
+    {
+        color: rgb(0, 50, 92);
+    }
+}
+
+.register
+{
+    display: flex;
+    flex-direction: column;
+
+    button
+    {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(40, 101, 154);;
+        color: white;
+    }
+
+    button:hover 
+    {
+        background-color: rgb(15, 76, 129);;
+    }
+}
+
+.field
+{
+    #firstName
+    {
+        margin: 0 0 0 0;
+        padding: 7px 10px;
+        width: 100%;
+    }
+
+    #lastName
+    {
+        margin: 0 0 0 0;
+        padding: 7px 10px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1300px) 
+{
+    .register-container
+    {
+        width: 60%;
+    }
+
+    .register
+    {
+        button
+        {
+            display: block;
+            margin-top: 20px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) 
+{
+    .register-container
+    {
+        width: 80%;
+    }
+}

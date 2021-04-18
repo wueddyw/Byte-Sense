@@ -7,7 +7,10 @@ function Showcase(props) {
       style={{ backgroundImage: "url(" + props.image + ")" }}
     >
       <div className="showcase-text">
-        <h3>{props.text}</h3>
+        <h3>{props.title}</h3>
+        <p>{props.text}</p>
+      </div>
+      <div className="showcase-text">
       </div>
     </div>
   );
