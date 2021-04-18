@@ -6,31 +6,24 @@ export default function ExpertScanDetails() {
   const fetchData = async () => {
     const res = await fetch("http://localhost:9000/products/60792408b0cf1db650f24887");
     res.json().then((res) => {
-      console.log(res.data);
       setProducts(res.data);
     }).catch((error) => {
       setError(error);
     });
   }
-  const addToCart = async (id) => {
-    try {
-      const response = await fetch("http://localhost:9000/cart", {
-        method: "POST",
-        body: JSON.stringify({
-          productId: id,
-          quantity: 1,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
-      let data = await response.json();
-      alert("Item Added To Cart");
-      console.log(data);
-    } catch (err) {
-      alert("Something Went Wrong");
-      console.log(err);
+  const addToCart = (product) => {
+    let cart = [];
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart'));
     }
+    const exists = cart.some(prod => prod._id === product._id)
+    if (!exists) {
+      console.log(product);
+      console.log(cart);
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    alert("Item Added To Cart");
   }
   useEffect(() => {
     fetchData();
@@ -44,7 +37,7 @@ export default function ExpertScanDetails() {
         <li>Export reports in PDF and CSV files formats</li>
         <li>Capture vulnerability IP addresses and location</li>
         <li>Monitor live system traffic activities and remote any malicious virus</li>
-        <button onClick={() => addToCart(products['_id'])}>Add to Cart</button>
+        <button onClick={() => addToCart(products)}>Add to Cart</button>
       </ul>
     </div>
   );

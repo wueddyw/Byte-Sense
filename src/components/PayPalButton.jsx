@@ -11,6 +11,10 @@ export default function PaypalButton(props) {
         currency="USD"
         shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         onSuccess={(details, data) => {
+          localStorage.removeItem('cart');
+          sessionStorage.setItem('buyerName', details.payer.name.given_name);
+          sessionStorage.setItem('orderID', data.orderID);
+          sessionStorage.setItem('buyerEmail', details.payer.email_address);
           window.location.href = props.afterPurchaseGoTo;
           //   alert("Transaction completed by " + details.payer.name.given_name);
 

@@ -8,39 +8,33 @@ import PaypalButton from "../PayPalButton.jsx";
 
 export default function Cart(props) {
   const [cart, setCart] = useState([]);
-  const [payload, setPayload] = useState({});
-  const [haserror, setError] = useState(false);
-  const fetchData = async () => {
-    const res = await fetch("http://localhost:9000/cart");
-    res
-      .json()
-      .then((res) => {
-        setCart(res.data.items);
-        setPayload(res.data);
-      })
-      .catch((error) => {
-        setError(error);
-      });
-  };
+  const [total, setTotal] = useState(0.00);
 
-  const deleteItemFromCart = async (id) => {
-    try {
-      const res = await fetch("http://localhost:9000/cart/remove-item", {
-        method: "DELETE",
-        body: JSON.stringify({
-          productId: id,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
+  const fetchData = () => {
+    if (localStorage.getItem('cart') !== null) {
+      let temp = JSON.parse(localStorage.getItem('cart'));
+      setCart(temp);
+      let num = 0;
+      temp.forEach(function (item, index) {
+        num += parseFloat(item.price);
       });
-      await res.json();
-      fetchData();
-      props.history.push("/Cart");
-    } catch (err) {
-      console.log(err);
-    }
-  };
+      console.log(num);
+      setTotal(num);
+    } 
+  }
+
+  const deleteItemFromCart = (id) => {
+    let stored = JSON.parse(localStorage.getItem('cart'));
+    let newCart = stored.filter(product => product._id !== id);
+    setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
+    let num = 0;
+    newCart.forEach(function (item, index) {
+      num += parseFloat(item.price);
+    });
+    console.log(num);
+    setTotal(num);
+  }
 
   useEffect(() => {
     fetchData();
@@ -58,20 +52,20 @@ export default function Cart(props) {
                 <div id="item-container">
                   {cart.map((item, i) => (
                     <CartItem
-                      name={item.productId.name}
-                      price={item.productId.price}
+                      name={item.name}
+                      price={item.price}
                       remove={deleteItemFromCart}
-                      id={item.productId._id}
-                      key={item.productId._id}
+                      id={item._id}
+                      key={item._id}
                     />
                   ))}
                 </div>
                 <div className="total">
                   <h2>Summary</h2>
-                  <h3>Total: ${payload.subTotal}</h3>
+                  <h3>Total: ${total}</h3>
                   <PaypalButton
-                    amount={payload.subTotal}
-                    afterPurchaseGoTo="Home"
+                    amount={total}
+                    afterPurchaseGoTo="/Confirm"
                   />
                 </div>
               </div>

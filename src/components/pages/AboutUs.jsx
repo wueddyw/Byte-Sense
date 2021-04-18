@@ -18,6 +18,7 @@ export default function ContactUs() {
   return (
     <>
       <Navbar />
+      <div>
       <div className="wrapper">
         <Showcase image={ShowcaseImage} title="About Us" text="" />
         <TextDiv
@@ -82,6 +83,7 @@ export default function ContactUs() {
           div4="Custom Solutions"
         />
         <Footer />
+        </div>
       </div>
     </>
   );

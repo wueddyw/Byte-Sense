@@ -17,6 +17,7 @@ import ExpertScan from './components/pages/ExpertScan';
 import Login from './components/pages/Login';
 import Cart from './components/pages/Cart';
 import Register from "./components/pages/Register";
+import ConfirmPage from "./components/pages/Confirmation";
 import AOS from "aos";
 import { getFromStorage, setInStorage } from "./utils/storage";
 import "aos/dist/aos.css"
@@ -53,6 +54,7 @@ function ExtraStep() {
         <Route path = '/ExpertScan' component={ExpertScan}/>
         <Route path='/Login' component={Login} />
         <Route path='/Cart' component={Cart} />
+        <Route path="/Confirm" component={ConfirmPage}/>
       </Switch>
         <Route path="/Register" component={Register} />
     </main>
