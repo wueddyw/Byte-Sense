@@ -17,3 +17,9 @@
     font-size: 18px;
     margin-top: 2vh;
 }
+
+@media screen and (max-width: 1200px) {
+    .confirmBody h2 {
+        font-size: 24px;
+    }
+}
