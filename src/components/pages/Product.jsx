@@ -5,7 +5,7 @@ import ExpertScanDetails from "../ExpertScanDetails";
 import "../../styles/product.css";
 import ProductTopBanner from "../ProductTopBanner";
 import Footer from "../Footer";
-
+import Banner from "../../images/Product.png";
 export default function Product() {
   return (
     <>
@@ -28,7 +28,9 @@ export default function Product() {
         <div className="productbox" data-aos="fade-left">
           <div className="aboutProduct">
             <StandardScanDetails />
+            <img src ={Banner} className="productImage"/>
             <ExpertScanDetails />
+            <img src ={Banner} className="productImage"/>
           </div>
         </div>
         <Footer />
